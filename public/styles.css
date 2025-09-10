@@ -1,0 +1,391 @@
+/* ============ Baseline & thema ============ */
+:root {
+  --bg: #ffffff;
+  --text: #0f172a; /* slate-900 */
+  --muted: #475569; /* slate-600 */
+  --brand: #2563eb; /* blauw */
+  --brand-dark: #1e40af;
+  --border: #e5e7eb; /* gray-200 */
+  --surface: #f8fafc; /* slate-50 */
+  --radius: 14px;
+  --shadow: 0 6px 22px rgba(2, 6, 23, 0.06);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ============ Layout helpers ============ */
+.container {
+  width: min(1100px, 92%);
+  margin-inline: auto;
+}
+
+.section {
+  padding: 48px 0;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 28px;
+}
+
+/* ============ Typografie ============ */
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+h1 {
+  font-size: clamp(28px, 3.2vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-size: clamp(22px, 2.8vw, 28px);
+  font-weight: 700;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+p {
+  margin: 0 0 12px;
+  color: var(--muted);
+}
+
+/* ============ Header & navigatie ============ */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 14px 0;
+}
+
+.brand {
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  font-size: 18px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: var(--text);
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-link:hover {
+  background: var(--surface);
+}
+
+.nav-link.active {
+  color: var(--brand);
+  background: color-mix(in srgb, var(--brand) 10%, #fff);
+}
+
+/* ============ Hero (Home) ============ */
+.hero {
+  padding: 72px 0 36px;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero h1 {
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+/* ============ Content blokken ============ */
+.stack {
+  display: grid;
+  gap: 16px;
+}
+
+.grid-2 {
+  display: grid;
+  gap: 22px;
+}
+
+@media (min-width: 780px) {
+  .grid-2 {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+/* ============ Buttons & links ============ */
+.btn {
+  display: inline-block;
+  padding: 10px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: #fff;
+  color: var(--text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.btn:hover {
+  box-shadow: var(--shadow);
+}
+
+.btn.primary {
+  background: var(--brand);
+  border-color: transparent;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: var(--brand-dark);
+}
+
+/* ============ Footer ============ */
+.site-footer {
+  border-top: 1px solid var(--border);
+  margin-top: 40px;
+  padding: 18px 0 32px;
+  color: var(--muted);
+  font-size: 14px;
+  text-align: center;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #1e3a8a; /* mooi donkerblauw */
+}
+
+nav {
+  background: #2563eb;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #1e3a8a; /* mooi donkerblauw */
+}
+
+nav {
+  background: #2563eb;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  color: #1e3a8a; /* mooi donkerblauw */
+}
+
+nav {
+  background: #2563eb;
+  padding: 1rem;
+}
+
+nav a {
+  color: white;
+  margin-right: 1rem;
+  text-decoration: none;
+  font-weight: bold;
+}
+/* === Design tokens === */
+:root {
+  --bg: #f6f7fb;
+  --text: #121826;
+  --muted: #5b6473;
+  --brand: #2563eb; /* blauw */
+  --brand-600: #1d4ed8;
+  --brand-700: #1e40af;
+  --card: #ffffff;
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+}
+
+/* Basis */
+html,
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+a {
+  color: inherit;
+}
+
+/* Container voor nette breedte */
+.container {
+  max-width: 1000px;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+/* Header / nav */
+header {
+  background: var(--card);
+  border-bottom: 1px solid rgba(2, 6, 23, 0.06);
+  box-shadow: var(--shadow);
+}
+nav {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.85rem 0;
+}
+nav a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+}
+nav a:hover {
+  background: rgba(37, 99, 235, 0.08);
+}
+nav a.active {
+  background: var(--brand);
+  color: #fff;
+}
+
+/* Hero */
+.hero {
+  margin-top: 2.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.09),
+    rgba(37, 99, 235, 0.03)
+  );
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+}
+.hero h1 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  line-height: 1.15;
+  margin: 0 0 0.5rem;
+}
+.hero p {
+  color: var(--muted);
+  max-width: 60ch;
+  margin: 0 0 1rem;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  background: var(--brand);
+  color: #fff;
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: var(--shadow);
+}
+.btn:hover {
+  background: var(--brand-600);
+}
+.btn:active {
+  background: var(--brand-700);
+}
+
+/* Content secties */
+section {
+  margin: 2.25rem 0;
+}
+h2 {
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  margin: 0 0 0.5rem;
+}
+.lead {
+  color: var(--muted);
+  max-width: 70ch;
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  padding: 1.25rem 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(2, 6, 23, 0.08);
+}
+
+/* Klein scherm: nav wrapt */
+@media (max-width: 640px) {
+  nav {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
