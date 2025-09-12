@@ -1,0 +1,9 @@
+[build]
+publish = "public"
+command = ""
+
+# Handig voor SPA/React routes; schaadt niets bij een statische site
+[[redirects]]
+from = "/*"
+to = "/index.html"
+status = 200
