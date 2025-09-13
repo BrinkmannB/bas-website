@@ -7,7 +7,12 @@ export default function Home() {
           Een veilige plek waar luisteren en vertrouwen centraal staan. Samen
           creëren we ruimte voor jouw verhaal – zonder oordeel.
         </p>
-        <a className="btn" href="/contact">
+        <a
+          className="btn"
+          href="https://calendly.com/vertrouwelijkluisterendoor"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Plan een kennismaking
         </a>
       </section>

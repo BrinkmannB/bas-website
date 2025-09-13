@@ -2,10 +2,12 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import Home from "./pages/Home";
 import Over from "./pages/Over";
 import Contact from "./pages/Contact";
+import Footer from "./components/Footer"; // let op: hoofdletter F en juiste map
 
 export default function App() {
   return (
     <BrowserRouter>
+      {/* Header */}
       <header>
         <div className="container">
           <nav aria-label="Hoofdmenu">
@@ -32,7 +34,8 @@ export default function App() {
         </div>
       </header>
 
-      <main className="container">
+      {/* Main */}
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/over" element={<Over />} />
@@ -40,10 +43,8 @@ export default function App() {
         </Routes>
       </main>
 
-      <footer className="container">
-        © {new Date().getFullYear()} Vertrouwelijk Luisterend Oor · Alle rechten
-        voorbehouden.
-      </footer>
+      {/* Footer */}
+      <Footer />
     </BrowserRouter>
   );
 }
