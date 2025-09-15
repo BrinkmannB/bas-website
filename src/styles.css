@@ -2,3 +2,8 @@
   font-family: sans-serif;
   text-align: center;
 }
+.active {
+  color: #4f46e5; /* indigo-600 */
+  font-weight: 600;
+  text-underline-offset: 3px;
+}

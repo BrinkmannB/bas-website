@@ -2,7 +2,9 @@ import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 import Home from "./pages/Home";
 import Over from "./pages/Over";
 import Contact from "./pages/Contact";
-import Footer from "./components/Footer"; // let op: hoofdletter F en juiste map
+import Diensten from "./pages/Diensten";
+import NotFound from "./pages/NotFound";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -25,6 +27,12 @@ export default function App() {
               Over mij
             </NavLink>
             <NavLink
+              to="/diensten"
+              className={({ isActive }) => (isActive ? "active" : undefined)}
+            >
+              Diensten
+            </NavLink>
+            <NavLink
               to="/contact"
               className={({ isActive }) => (isActive ? "active" : undefined)}
             >
@@ -39,7 +47,9 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/over" element={<Over />} />
+          <Route path="/diensten" element={<Diensten />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
