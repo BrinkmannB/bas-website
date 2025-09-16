@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pagina niet gevonden – luisterendoor.info</title>
+    <meta name="robots" content="noindex" />
+    <style>
+      :root {
+        --bg: #0f172a; /* donkerblauw/grijs */
+        --card: #111827; /* donker */
+        --text: #e5e7eb; /* licht */
+        --muted: #9ca3af; /* grijs */
+        --accent: #22c55e; /* groen */
+        --accent-2: #3b82f6; /* blauw */
+        --radius: 16px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        height: 100%;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        color: var(--text);
+        background: radial-gradient(
+          80rem 80rem at 20% -10%,
+          #1f2937 0%,
+          var(--bg) 50%
+        );
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+      .card {
+        width: 100%;
+        max-width: 720px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.03),
+          rgba(255, 255, 255, 0.02)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(6px);
+        border-radius: var(--radius);
+        padding: 32px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+        text-align: center;
+      }
+      h1 {
+        font-size: clamp(28px, 4vw, 40px);
+        margin: 0 0 8px;
+        letter-spacing: -0.02em;
+      }
+      p {
+        margin: 0.5rem 0 0;
+        color: var(--muted);
+        line-height: 1.6;
+      }
+      .actions {
+        margin-top: 24px;
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      a.button {
+        text-decoration: none;
+        padding: 12px 18px;
+        border-radius: 999px;
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        transition: transform 0.05s ease, background 0.2s ease,
+          border-color 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        font-weight: 600;
+      }
+      a.primary {
+        background: var(--accent);
+        color: #0b141a;
+        border-color: transparent;
+      }
+      a.secondary {
+        background: transparent;
+        color: var(--text);
+      }
+      a.button:hover {
+        transform: translateY(-1px);
+      }
+      .hint {
+        margin-top: 18px;
+        font-size: 14px;
+        color: var(--muted);
+      }
+      .code {
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        color: #cbd5e1;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card" role="main" aria-labelledby="title">
+      <h1 id="title">Oeps… deze pagina bestaat niet (404)</h1>
+      <p>
+        De link die je volgde is verplaatst of nooit bestaan. Geen stress—je
+        bent één klik van de juiste plek.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="/">⬅︎ Terug naar Home</a>
+        <a class="button secondary" href="/contact">✉︎ Naar Contact</a>
+      </div>
+      <p class="hint">Tip: controleer de URL of ga terug naar <span class="code">/</span>.</p>
+      </p>
+    </main>
+  </body>
+</html>
