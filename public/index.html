@@ -4,42 +4,123 @@
     <head>
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-    
-      <title>Luisterend Oor – Vertrouwenspersoon & AI-ethiek | Bas Brinkmann</title>
-      <meta name="description" content="Ik help organisaties met luisteren, helder maken en richting geven. Vertrouwenspersoon en AI-ethiek adviseur. Plan een gesprek.">
-    
+
+      <title>
+        Luisterend Oor – Vertrouwenspersoon & AI-ethiek | Bas Brinkmann
+      </title>
+      <meta
+        name="description"
+        content="Ik help organisaties met luisteren, helder maken en richting geven. Vertrouwenspersoon en AI-ethiek adviseur. Plan een gesprek."
+      />
+
       <!-- Icons -->
-      <link rel="icon" href="/img/favicon.ico">
-      <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" sizes="180x180">
-    
+      <link rel="icon" href="/img/favicon.ico" />
+      <link
+        rel="apple-touch-icon"
+        href="/img/apple-touch-icon.png"
+        sizes="180x180"
+      />
+
       <!-- Open Graph (Facebook/LinkedIn) -->
-      <meta property="og:type" content="website">
-      <meta property="og:site_name" content="luisterendoor.info">
-      <meta property="og:title" content="Luisterend Oor – Vertrouwenspersoon & AI-ethiek">
-      <meta property="og:description" content="Luisteren • Helder maken • Richting geven. Plan een gesprek.">
-      <meta property="og:url" content="https://luisterendoor.info/">
-      <meta property="og:image" content="https://luisterendoor.info/img/og-cover.jpg">
-      <meta property="og:image:alt" content="Portret Bas Brinkmann – Luisterend Oor">
-    
+      <meta property="og:type" content="website" />
+      <meta property="og:site_name" content="luisterendoor.info" />
+      <meta
+        property="og:title"
+        content="Luisterend Oor – Vertrouwenspersoon & AI-ethiek"
+      />
+      <meta
+        property="og:description"
+        content="Luisteren • Helder maken • Richting geven. Plan een gesprek."
+      />
+      <meta property="og:url" content="https://luisterendoor.info/" />
+      <meta
+        property="og:image"
+        content="https://luisterendoor.info/img/og-cover.jpg"
+      />
+      <meta
+        property="og:image:alt"
+        content="Portret Bas Brinkmann – Luisterend Oor"
+      />
+
       <!-- Twitter -->
-      <meta name="twitter:card" content="summary_large_image">
-    
+      <meta name="twitter:card" content="summary_large_image" />
+
       <!-- (optioneel) JSON-LD voor Person -->
       <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Bas Brinkmann",
-        "url": "https://luisterendoor.info/",
-        "jobTitle": "Vertrouwenspersoon & AI-ethiek adviseur",
-        "sameAs": ["https://www.linkedin.com/in/basbrinkmann"]
-      }
+        {
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Bas Brinkmann",
+          "url": "https://luisterendoor.info/",
+          "jobTitle": "Vertrouwenspersoon & AI-ethiek adviseur",
+          "sameAs": ["https://www.linkedin.com/in/basbrinkmann"]
+        }
       </script>
     </head>
-      
-      
-    
   </head>
+
+  <!-- Cookie & Privacy Banner -->
+  <div id="cookie-banner" class="cookie-banner">
+    <p>
+      🍪 We gebruiken functionele cookies om je ervaring te verbeteren. Lees
+      meer in ons <a href="/privacy.html">privacybeleid</a>.
+    </p>
+    <button id="accept-cookies">Akkoord</button>
+  </div>
+
+  <style>
+    .cookie-banner {
+      position: fixed;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      max-width: 640px;
+      width: 90%;
+      background: rgba(17, 24, 39, 0.95); /* donkergrijs transparant */
+      color: #e5e7eb;
+      padding: 16px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      z-index: 9999;
+    }
+    .cookie-banner p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+    .cookie-banner a {
+      color: #3b82f6;
+      text-decoration: underline;
+    }
+    .cookie-banner button {
+      background: #22c55e;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 8px;
+      color: #0b141a;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .cookie-banner button:hover {
+      background: #16a34a;
+    }
+  </style>
+
+  <script>
+    const banner = document.getElementById("cookie-banner");
+    const btn = document.getElementById("accept-cookies");
+    if (localStorage.getItem("cookiesAccepted")) {
+      banner.style.display = "none";
+    }
+    btn.addEventListener("click", () => {
+      localStorage.setItem("cookiesAccepted", "yes");
+      banner.style.display = "none";
+    });
+  </script>
   <body>
     <noscript
       >Je moet JavaScript inschakelen om deze app te gebruiken.</noscript
