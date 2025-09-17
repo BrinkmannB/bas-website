@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact – luisterendoor.info</title>
+    <meta name="robots" content="index, follow" />
+    <style>
+      :root {
+        --bg: #0f172a;
+        --card: #111827;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --accent: #22c55e;
+        --radius: 16px;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial,
+          sans-serif;
+        color: var(--text);
+        background: radial-gradient(
+          80rem 80rem at 20% -10%,
+          #1f2937 0%,
+          var(--bg) 50%
+        );
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+      .card {
+        width: 100%;
+        max-width: 640px;
+        background: linear-gradient(
+          180deg,
+          rgba(255, 255, 255, 0.03),
+          rgba(255, 255, 255, 0.02)
+        );
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(6px);
+        border-radius: var(--radius);
+        padding: 32px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(28px, 4vw, 36px);
+        text-align: center;
+      }
+      p.hint {
+        margin: 6px 0 20px;
+        color: var(--muted);
+        text-align: center;
+      }
+      form {
+        display: grid;
+        gap: 14px;
+      }
+      label {
+        font-weight: 600;
+      }
+      input,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        background: #1f2937;
+        color: var(--text);
+        font-size: 16px;
+      }
+      textarea {
+        min-height: 140px;
+      }
+      .row {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: 1fr 1fr;
+      }
+      @media (max-width: 560px) {
+        .row {
+          grid-template-columns: 1fr;
+        }
+      }
+      button {
+        padding: 12px 18px;
+        border: none;
+        border-radius: 999px;
+        background: var(--accent);
+        color: #0b141a;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .footer {
+        margin-top: 10px;
+        text-align: center;
+        color: var(--muted);
+        font-size: 14px;
+      }
+      .nav {
+        margin-top: 18px;
+        text-align: center;
+      }
+      .nav a {
+        color: var(--text);
+        text-decoration: none;
+        opacity: 0.9;
+      }
+      .nav a:hover {
+        opacity: 1;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="card">
+      <h1>Neem contact op</h1>
+      <p class="hint">
+        Laat je bericht achter — we reageren meestal binnen 1–2 werkdagen.
+      </p>
+
+      <!-- Netlify Forms: stuur na succes door naar /thanks.html -->
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        action="/thanks.html"
+        netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <!-- honeypot tegen spam -->
+        <p style="display: none">
+          <label>Laat dit veld leeg: <input name="bot-field" /></label>
+        </p>
+
+        <div class="row">
+          <label
+            >Naam
+            <input type="text" name="naam" autocomplete="name" required />
+          </label>
+          <label
+            >E-mail
+            <input type="email" name="email" autocomplete="email" required />
+          </label>
+        </div>
+
+        <label
+          >Onderwerp
+          <input type="text" name="onderwerp" required />
+        </label>
+
+        <label
+          >Bericht
+          <textarea name="bericht" required></textarea>
+        </label>
+
+        <button type="submit">✉︎ Verstuur bericht</button>
+      </form>
+
+      <div class="nav">
+        <a href="/">⬅︎ Terug naar Home</a>
+      </div>
+      <div class="footer">👂 luisterendoor.info</div>
+    </main>
+  </body>
+</html>
