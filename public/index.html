@@ -1,130 +1,101 @@
 <!DOCTYPE html>
 <html lang="nl">
   <head>
-    <head>
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Luisterend Oor – Vertrouwenspersoon</title>
+    <meta name="description" content="Luisterend Oor – vertrouwenspersoon. Eerlijk advies, met aandacht.">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      :root {
+        --bg: #0f172a;        /* donkerblauw/grijs */
+        --card: #111827;      /* donker */
+        --text: #e5e7eb;      /* licht */
+        --muted: #9ca3af;     /* grijs */
+        --accent: #22c55e;    /* groen */
+        --radius: 16px;
+      }
+      * { box-sizing: border-box; }
+      html, body { height: 100%; }
+      body {
+        margin: 0;
+        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+        color: var(--text);
+        background: radial-gradient(80rem 80rem at 20% -10%, #1f2937 0%, var(--bg) 50%);
+        min-height: 100vh;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+      }
+      .card {
+        width: 100%;
+        max-width: 840px;
+        background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+        border: 1px solid rgba(255,255,255,0.08);
+        backdrop-filter: blur(6px);
+        border-radius: var(--radius);
+        padding: 32px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+        text-align: center;
+      }
+      h1 { margin: 0 0 8px; font-size: clamp(28px, 5vw, 44px); letter-spacing: -0.02em; }
+      p.lead { margin: 8px 0 18px; color: var(--muted); font-size: clamp(16px, 2.5vw, 18px); }
+      .actions { margin-top: 20px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+      a.button {
+        text-decoration: none; padding: 12px 18px; border-radius: 999px;
+        border: 1px solid rgba(255,255,255,0.12);
+        transition: transform .05s ease, background .2s ease, border-color .2s ease;
+        display: inline-flex; align-items: center; gap: 8px; font-weight: 600;
+      }
+      a.primary { background: var(--accent); color: #0b141a; border-color: transparent; }
+      a.secondary { background: transparent; color: var(--text); }
+      a.button:hover { transform: translateY(-1px); }
+      footer { margin-top: 16px; color: var(--muted); font-size: 14px; }
 
-      <title>
-        Luisterend Oor – Vertrouwenspersoon & AI-ethiek | Bas Brinkmann
-      </title>
-      <meta
-        name="description"
-        content="Ik help organisaties met luisteren, helder maken en richting geven. Vertrouwenspersoon en AI-ethiek adviseur. Plan een gesprek."
-      />
-
-      <!-- Icons -->
-      <link rel="icon" href="/img/favicon.ico" />
-      <link
-        rel="apple-touch-icon"
-        href="/img/apple-touch-icon.png"
-        sizes="180x180"
-      />
-
-      <!-- Open Graph (Facebook/LinkedIn) -->
-      <meta property="og:type" content="website" />
-      <meta property="og:site_name" content="luisterendoor.info" />
-      <meta
-        property="og:title"
-        content="Luisterend Oor – Vertrouwenspersoon & AI-ethiek"
-      />
-      <meta
-        property="og:description"
-        content="Luisteren • Helder maken • Richting geven. Plan een gesprek."
-      />
-      <meta property="og:url" content="https://luisterendoor.info/" />
-      <meta
-        property="og:image"
-        content="https://luisterendoor.info/img/og-cover.jpg"
-      />
-      <meta
-        property="og:image:alt"
-        content="Portret Bas Brinkmann – Luisterend Oor"
-      />
-
-      <!-- Twitter -->
-      <meta name="twitter:card" content="summary_large_image" />
-
-      <!-- (optioneel) JSON-LD voor Person -->
-      <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "Person",
-          "name": "Bas Brinkmann",
-          "url": "https://luisterendoor.info/",
-          "jobTitle": "Vertrouwenspersoon & AI-ethiek adviseur",
-          "sameAs": ["https://www.linkedin.com/in/basbrinkmann"]
-        }
-      </script>
-    </head>
+      /* Cookie banner (werkt met jouw privacy.html) */
+      .cookie-banner {
+        position: fixed; bottom: 16px; left: 50%; transform: translateX(-50%);
+        max-width: 640px; width: 90%;
+        background: rgba(17,24,39,0.95); color: #e5e7eb;
+        padding: 16px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        display: flex; justify-content: space-between; align-items: center; gap: 12px; z-index: 9999;
+      }
+      .cookie-banner p { margin: 0; font-size: 14px; line-height: 1.4; }
+      .cookie-banner a { color: #3b82f6; text-decoration: underline; }
+      .cookie-banner button {
+        background: var(--accent); border: none; padding: 8px 14px; border-radius: 8px;
+        color: #0b141a; font-weight: 600; cursor: pointer;
+      }
+      .cookie-banner button:hover { background: #16a34a; }
+    </style>
   </head>
-
-  <!-- Cookie & Privacy Banner -->
-  <div id="cookie-banner" class="cookie-banner">
-    <p>
-      🍪 We gebruiken functionele cookies om je ervaring te verbeteren. Lees
-      meer in ons <a href="/privacy.html">privacybeleid</a>.
-    </p>
-    <button id="accept-cookies">Akkoord</button>
-  </div>
-
-  <style>
-    .cookie-banner {
-      position: fixed;
-      bottom: 16px;
-      left: 50%;
-      transform: translateX(-50%);
-      max-width: 640px;
-      width: 90%;
-      background: rgba(17, 24, 39, 0.95); /* donkergrijs transparant */
-      color: #e5e7eb;
-      padding: 16px;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 12px;
-      z-index: 9999;
-    }
-    .cookie-banner p {
-      margin: 0;
-      font-size: 14px;
-      line-height: 1.4;
-    }
-    .cookie-banner a {
-      color: #3b82f6;
-      text-decoration: underline;
-    }
-    .cookie-banner button {
-      background: #22c55e;
-      border: none;
-      padding: 8px 14px;
-      border-radius: 8px;
-      color: #0b141a;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .cookie-banner button:hover {
-      background: #16a34a;
-    }
-  </style>
-
-  <script>
-    const banner = document.getElementById("cookie-banner");
-    const btn = document.getElementById("accept-cookies");
-    if (localStorage.getItem("cookiesAccepted")) {
-      banner.style.display = "none";
-    }
-    btn.addEventListener("click", () => {
-      localStorage.setItem("cookiesAccepted", "yes");
-      banner.style.display = "none";
-    });
-  </script>
   <body>
-    <noscript
-      >Je moet JavaScript inschakelen om deze app te gebruiken.</noscript
-    >
-    <div id="root"></div>
+    <main class="card" role="main">
+      <h1>Luisterend Oor</h1>
+      <p class="lead">Vertrouwenspersoon – eerlijk advies, met aandacht.</p>
+
+      <div class="actions">
+        <a class="button primary" href="/contact">✉︎ Neem contact op</a>
+        <a class="button secondary" href="/privacy.html">🔒 Privacybeleid</a>
+        <a class="button secondary" href="/thanks.html">✅ Bedankpagina</a>
+      </div>
+
+      <footer>👂 luisterendoor.info</footer>
+    </main>
+
+    <!-- Cookie & Privacy Banner -->
+    <div id="cookie-banner" class="cookie-banner">
+      <p>🍪 We gebruiken functionele cookies om je ervaring te verbeteren. Lees meer in ons <a href="/privacy.html">privacybeleid</a>.</p>
+      <button id="accept-cookies">Akkoord</button>
+    </div>
+    <script>
+      const banner = document.getElementById("cookie-banner");
+      const btn = document.getElementById("accept-cookies");
+      if (localStorage.getItem("cookiesAccepted")) banner.style.display = "none";
+      btn.addEventListener("click", () => {
+        localStorage.setItem("cookiesAccepted", "yes");
+        banner.style.display = "none";
+      });
+    </script>
   </body>
 </html>

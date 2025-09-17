@@ -124,47 +124,24 @@
       </p>
 
       <!-- Netlify Forms: stuur na succes door naar /thanks.html -->
-      <form
-        name="contact"
-        method="POST"
-        data-netlify="true"
-        action="/thanks.html"
-        netlify-honeypot="bot-field"
-      >
+      <form name="contact" method="POST" data-netlify="true" action="/thanks">
         <input type="hidden" name="form-name" value="contact" />
-        <!-- honeypot tegen spam -->
-        <p style="display: none">
-          <label>Laat dit veld leeg: <input name="bot-field" /></label>
-        </p>
-
-        <div class="row">
-          <label
-            >Naam
-            <input type="text" name="naam" autocomplete="name" required />
-          </label>
-          <label
-            >E-mail
-            <input type="email" name="email" autocomplete="email" required />
-          </label>
-        </div>
-
-        <label
-          >Onderwerp
+      
+        <label>
+          Email
+          <input type="email" name="email" required />
+        </label>
+      
+        <label>
+          Onderwerp
           <input type="text" name="onderwerp" required />
         </label>
-
-        <label
-          >Bericht
+      
+        <label>
+          Bericht
           <textarea name="bericht" required></textarea>
         </label>
-
+      
         <button type="submit">✉︎ Verstuur bericht</button>
       </form>
-
-      <div class="nav">
-        <a href="/">⬅︎ Terug naar Home</a>
-      </div>
-      <div class="footer">👂 luisterendoor.info</div>
-    </main>
-  </body>
-</html>
+      
