@@ -19,90 +19,33 @@
       </p>
 
       <!-- Contactmogelijkheden -->
-      <div class="grid" aria-label="Contactopties">
-        <section class="tile">
-          <h2>E-mail</h2>
-          <p class="muted">Stuur direct een bericht:</p>
-          <p>
-            <a href="mailto:brinkmann.bas@icloud.com" class="button primary"
-              >✉︎ Mail Bas</a
-            >
-          </p>
-        </section>
-
-        <section class="tile">
-          <h2>LinkedIn</h2>
-          <p class="muted">Verbinden of bericht sturen via LinkedIn:</p>
-          <p>
-            <a
-              href="https://www.linkedin.com/in/basbrinkmann"
-              target="_blank"
-              class="button secondary"
-              >🔗 LinkedIn-profiel</a
-            >
-          </p>
-        </section>
+      <div class="actions" style="margin-bottom: 24px">
+        <a class="button primary" href="mailto:brinkmann.bas@icloud.com"
+          >✉︎ Mail Bas</a
+        >
+        <a
+          class="button secondary"
+          href="https://www.linkedin.com/in/basbrinkmann"
+          target="_blank"
+          >🔗 LinkedIn-profiel</a
+        >
       </div>
 
-      <!-- Optioneel formulier (placeholder) -->
-      <section style="margin-top: 24px; text-align: left">
-        <h2>Contactformulier (placeholder)</h2>
-        <p class="muted">
-          Dit formulier stuurt nog geen mail, maar kan later gekoppeld worden
-          aan een service.
-        </p>
-        <form>
-          <label for="name">Naam</label><br />
-          <input
-            type="text"
-            id="name"
-            name="name"
-            style="
-              width: 100%;
-              padding: 8px;
-              border-radius: 6px;
-              margin-bottom: 12px;
-            "
-          /><br />
+      <!-- Contactformulier -->
+      <form class="form" name="contact" netlify>
+        <label for="name">Naam</label>
+        <input type="text" id="name" name="name" required />
 
-          <label for="email">E-mail</label><br />
-          <input
-            type="email"
-            id="email"
-            name="email"
-            style="
-              width: 100%;
-              padding: 8px;
-              border-radius: 6px;
-              margin-bottom: 12px;
-            "
-          /><br />
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="email" required />
 
-          <label for="message">Bericht</label><br />
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            style="
-              width: 100%;
-              padding: 8px;
-              border-radius: 6px;
-              margin-bottom: 12px;
-            "
-          ></textarea
-          ><br />
+        <label for="message">Bericht</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-          <button type="submit" class="button primary">
-            Verstuur (nog niet actief)
-          </button>
-        </form>
-      </section>
+        <button type="submit" class="button primary">Verstuur</button>
+      </form>
 
-      <div class="actions" style="margin-top: 22px">
-        <a class="button secondary" href="/">⬅︎ Terug naar homepage</a>
-      </div>
-
-      <footer class="muted" style="margin-top: 12px">
+      <footer class="muted" style="margin-top: 16px">
         📌 Je gegevens worden alleen gebruikt om je bericht te beantwoorden (zie
         <a href="/privacy.html">privacybeleid</a>).
       </footer>
