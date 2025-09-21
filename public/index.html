@@ -3,41 +3,51 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Luisterend Oor – Vertrouwenspersoon</title>
-    <meta name="description" content="Luisterend Oor – vertrouwenspersoon. Eerlijk advies, met aandacht.">
-
-    <!-- Fonts & Stylesheet -->
+    <title>Luisterend Oor – AI Governance & Vertrouwenspersoon</title>
+    <meta name="description" content="Verantwoord en toetsbaar gebruik van AI. Governance, compliance en ethiek — met aandacht.">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Merriweather:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/styles.css">
   </head>
   <body>
-    <main class="card" role="main">
-      <!-- Profielfoto -->
+    <!-- Hero card -->
+    <main class="card" role="main" aria-label="Intro">
       <img src="/img/bas-hero.jpg" alt="Bas Brinkmann" class="avatar avatar--round">
-
-      <!-- Titel & tagline -->
       <h1>Luisterend Oor</h1>
-      <p class="lead">Vertrouwenspersoon – eerlijk advies, met aandacht.</p>
+      <p class="lead">AI Governance & Vertrouwenspersoon — eerlijk advies, met aandacht.</p>
 
-      <!-- Acties -->
       <div class="actions">
-        <a class="button primary" href="/contact">✉︎ Neem contact op</a>
-        <a class="button secondary" href="/over.html">👤 Over mij</a>
+        <a class="button primary" href="/contact">✉︎ Plan kennismaking</a>
         <a class="button secondary" href="/diensten.html">💼 Diensten</a>
+        <a class="button secondary" href="/over.html">👤 Over mij</a>
         <a class="button secondary" href="/privacy.html">🔒 Privacybeleid</a>
-        <a class="button secondary" href="/thanks.html">✅ Bedankpagina</a>
       </div>
 
-      <!-- Footer -->
-      <footer>👂 luisterendoor.info</footer>
+      <footer class="muted" style="margin-top:12px">
+        Beschikbaar voor overheid & financiële sector · 👂 luisterendoor.info
+      </footer>
     </main>
 
-    <!-- Cookie & Privacy Banner -->
+    <!-- Mini waardeproppen onder de kaart -->
+    <section class="grid" aria-label="Kernwaarden" style="max-width:840px;margin:16px auto 0;">
+      <div class="tile">
+        <h2 style="margin-bottom:6px;">Governance</h2>
+        <p class="muted">Kaders, rollen en processen voor verantwoord AI-gebruik — aansluitend op bestaande besturing.</p>
+      </div>
+      <div class="tile">
+        <h2 style="margin-bottom:6px;">Compliance</h2>
+        <p class="muted">Praktische vertaling van AI Act en AVG: gap-analyse, controles, audit-trail en rapportage.</p>
+      </div>
+      <div class="tile">
+        <h2 style="margin-bottom:6px;">Ethiek</h2>
+        <p class="muted">Fairness, transparantie en explainability. Bias-assessments en draagvlak in de organisatie.</p>
+      </div>
+    </section>
+
+    <!-- Cookie banner blijft gelijk -->
     <div id="cookie-banner" class="cookie-banner">
-      <p>🍪 We gebruiken functionele cookies om je ervaring te verbeteren. Lees meer in ons <a href="/privacy.html">privacybeleid</a>.</p>
+      <p>🍪 We gebruiken functionele cookies. Lees meer in ons <a href="/privacy.html">privacybeleid</a>.</p>
       <button id="accept-cookies">Akkoord</button>
     </div>
-
     <script>
       const banner = document.getElementById("cookie-banner");
       const btn = document.getElementById("accept-cookies");
@@ -50,3 +60,4 @@
   </body>
 </html>
 
+     
