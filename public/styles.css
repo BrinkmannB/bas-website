@@ -28,11 +28,18 @@ html, body {
   backdrop-filter: blur(6px);
 }
 
-.avatar {
-  max-width: 120px;
+/* Avatar: altijd perfect rond en niet vervormen */
+.avatar{
+  width: 160px;              /* pas gerust aan (bv. 200) */
+  height: 160px;
+  aspect-ratio: 1 / 1;       /* houdt 'm vierkant */
   border-radius: 50%;
-  margin: 0 auto 16px;
+  object-fit: cover;         /* snijdt netjes bij i.p.v. rekken */
   display: block;
+  margin-inline: auto;
+  margin-bottom: 16px;
+}
+
 }
 
 h1 {
@@ -155,3 +162,18 @@ footer {
   margin-bottom: 0.25rem;
 }
 
+/* --- Avatar: altijd perfect rond --- */
+.avatar{
+  width: 160px !important;      /* vaste, gelijke zijden */
+  height: 160px !important;
+  aspect-ratio: 1 / 1;          /* extra zekerheid */
+  border-radius: 50%;
+  object-fit: cover;            /* snijdt bij ipv uitrekken */
+  object-position: center;
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 16px;
+
+  /* neutraliseer globale img-regels */
+  max-width: none;
+}
