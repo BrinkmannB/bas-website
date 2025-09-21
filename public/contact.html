@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="nl">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Contact – Plan een kennismaking | Luisterend Oor</title>
-  <meta name="description" content="Vragen of sparren over AI governance? Plan direct een kennismaking." />
-  <link rel="canonical" href="https://luisterendoor.info/contact.html" />
+    <title>Contact – Luisterend Oor</title>
+    <meta
+      name="description"
+      content="Neem contact op met Bas Brinkmann, AI Governance Consultant en vertrouwenspersoon. Plan een kennismaking of stel je vraag."
+    />
+    <link rel="canonical" href="https://luisterendoor.info/contact.html" />
 
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="stylesheet" href="/styles.css" />
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="card" role="main" aria-label="Contact">
+      <h1>Contact</h1>
+      <p class="lead">Stuur je vraag of plan een kennismaking.</p>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        action="/thanks.html"
+        class="form"
+        style="margin-top: 16px"
+      >
+        <input type="hidden" name="form-name" value="contact" />
 
-  <main class="card" role="main" aria-label="Contact">
-    <h1>Contact</h1>
-    <p class="lead">Stuur je vraag of plan een kennismaking.</p>
-    <form name="contact" method="POST" data-netlify="true" action="/thanks.html" class="form" style="margin-top:16px">
-      <input type="hidden" name="form-name" value="contact" />
-    
-      <label for="name">Naam</label>
-      <input id="name" name="name" type="text" required />
-    
-      <label for="email">E-mail</label>
-      <input id="email" name="email" type="email" required />
-    
-      <label for="message">Bericht</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-    
-      <div class="actions" style="justify-content:flex-start;margin-top:16px">
-        <button class="button primary" type="submit">Verstuur</button>
+        <label for="name">Naam</label>
+        <input id="name" name="name" type="text" required />
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required />
+
+        <label for="message">Bericht</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <div
+          class="actions"
+          style="justify-content: flex-start; margin-top: 16px"
+        >
+          <button class="button primary" type="submit">Verstuur</button>
+        </div>
+      </form>
+
+      <div class="actions" style="margin-top: 16px">
+        <a class="button secondary" href="mailto:brinkmann.bas@icloud.com"
+          >✉︎ Mail Bas</a
+        >
+        <a
+          class="button secondary"
+          href="https://www.linkedin.com/in/brinkmannb"
+          target="_blank"
+          rel="noopener"
+          >🔗 LinkedIn-profiel</a
+        >
       </div>
-    </form>
-    
-    
-      
-    
+    </main>
 
-    <div class="actions" style="margin-top:16px">
-      <a class="button secondary" href="mailto:brinkmann.bas@icloud.com">✉︎ Mail Bas</a>
-      <a class="button secondary" href="https://www.linkedin.com/in/brinkmannb" target="_blank" rel="noopener">🔗 LinkedIn-profiel</a>
-    </div>
-  </main>
-
-  <footer class="muted" style="margin-top:24px;text-align:center;">
-    <nav aria-label="Voetnavigatie">
-      <a href="/">Home</a> ·
-      <a href="/diensten.html">Diensten</a> ·
-      <a href="/over.html">Over</a> ·
-      <a href="/contact.html">Contact</a> ·
-      <a href="/privacy.html">Privacy</a>
-    </nav>
-  </footer>
-
-</body>
+    <footer class="muted" style="margin-top: 24px; text-align: center">
+      <nav aria-label="Voetnavigatie">
+        <a href="/">Home</a> · <a href="/diensten.html">Diensten</a> ·
+        <a href="/over.html">Over</a> · <a href="/contact.html">Contact</a> ·
+        <a href="/privacy.html">Privacy</a>
+      </nav>
+    </footer>
+  </body>
 </html>
-

@@ -3,64 +3,34 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bedankt – luisterendoor.info</title>
-    <meta name="robots" content="noindex" />
-    <style>
-      :root {
-        --bg: #0f172a;
-        --card: #111827;
-        --text: #e5e7eb;
-        --muted: #9ca3af;
-        --accent: #22c55e;
-        --radius: 16px;
-      }
-      body {
-        margin: 0;
-        font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-        background: radial-gradient(80rem 80rem at 20% -10%, #1f2937 0%, var(--bg) 50%);
-        color: var(--text);
-        display: grid;
-        place-items: center;
-        height: 100vh;
-        padding: 24px;
-      }
-      .card {
-        background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
-        border: 1px solid rgba(255,255,255,0.08);
-        border-radius: var(--radius);
-        padding: 32px;
-        text-align: center;
-        max-width: 600px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-      }
-      h1 {
-        font-size: clamp(26px, 4vw, 36px);
-        margin-bottom: 12px;
-      }
-      p {
-        color: var(--muted);
-        margin-bottom: 24px;
-      }
-      a {
-        display: inline-block;
-        text-decoration: none;
-        padding: 12px 20px;
-        border-radius: 999px;
-        background: var(--accent);
-        color: #0b141a;
-        font-weight: 600;
-        transition: transform 0.1s ease;
-      }
-      a:hover {
-        transform: translateY(-2px);
-      }
-    </style>
+    <title>Bedankt – Luisterend Oor</title>
+    <meta
+      name="description"
+      content="Bedankt voor je bericht aan Luisterend Oor. Wij nemen zo snel mogelijk contact met je op."
+    />
+    <link rel="canonical" href="https://luisterendoor.info/thanks.html" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <main class="card">
-      <h1>Bedankt voor je bericht!</h1>
-      <p>We hebben je formulier goed ontvangen. Je hoort snel van ons terug.</p>
-      <a href="/">⬅︎ Terug naar Home</a>
+    <main class="card" role="main" aria-label="Bedankpagina">
+      <h1>Bedankt!</h1>
+      <p class="lead">Je bericht is ontvangen. Ik reageer zo snel mogelijk.</p>
+
+      <div class="actions" style="margin-top: 16px">
+        <a class="button primary" href="/">🏠 Terug naar homepage</a>
+        <a class="button secondary" href="/diensten.html">💼 Bekijk diensten</a>
+      </div>
     </main>
+
+    <footer class="muted" style="margin-top: 24px; text-align: center">
+      <nav aria-label="Voetnavigatie">
+        <a href="/">Home</a> · <a href="/diensten.html">Diensten</a> ·
+        <a href="/over.html">Over</a> · <a href="/contact.html">Contact</a> ·
+        <a href="/privacy.html">Privacy</a>
+      </nav>
+    </footer>
   </body>
 </html>
