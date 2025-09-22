@@ -1,114 +1,141 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Luisterend Oor – AI Governance & Vertrouwenspersoon</title>
-    <meta name="description" content="AI Governance Consultant — eerlijk advies, met aandacht. Focus op governance, compliance (AI Act & AVG) en ethiek (fairness & explainability)." />
-    <meta name="robots" content="index, follow" />
-    <meta name="theme-color" content="#0f172a" />
-    <meta name="color-scheme" content="dark light" />
-  
-    <!-- Canonical -->
-    <link rel="canonical" href="https://luisterendoor.info/" />
-  
-    <!-- CSS -->
-    <link rel="preload" href="/styles.css?v=3" as="style" />
-    <link rel="stylesheet" href="/styles.css?v=3" />
-  
-    <!-- Favicons -->
-    <link rel="icon" href="/img/favicon.ico" sizes="any" />
-    <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
-  
-    <!-- Open Graph -->
-    <meta property="og:site_name" content="Luisterend Oor" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Luisterend Oor – AI Governance & Vertrouwenspersoon" />
-    <meta property="og:description" content="Eerlijk advies, met aandacht. Governance, compliance (AI Act & AVG) en ethiek." />
-    <meta property="og:url" content="https://luisterendoor.info/" />
-    <meta property="og:image" content="https://luisterendoor.info/img/og-banner.webp" />
-    <meta property="og:image:type" content="image/webp" />
-    <meta property="og:image:alt" content="Luisterend Oor — AI Governance & Vertrouwenspersoon" />
-  
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Luisterend Oor – AI Governance & Vertrouwenspersoon" />
-    <meta name="twitter:description" content="Eerlijk advies, met aandacht. Governance, compliance en ethiek." />
-    <meta name="twitter:image" content="https://luisterendoor.info/img/og-banner.webp" />
-  
-    <!-- JSON-LD (Organization) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Luisterend Oor",
-      "url": "https://luisterendoor.info/",
-      "logo": "https://luisterendoor.info/img/og-banner.webp",
-      "sameAs": []
-    }
-    </script>
-    <meta name="google-site-verification" content="JuH-uOJ0YTH8Xw4dnJ5kz8DaoXAI_6cShO2Azq9L85M" />
-  </head>
-  
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Luisterend Oor – AI Governance & Vertrouwenspersoon</title>
+  <meta name="description" content="Ik help organisaties verantwoord en toetsbaar AI in te zetten. Focus op governance, compliance (AI Act & AVG) en ethiek — eerlijk advies, met aandacht.">
+  <link rel="canonical" href="https://luisterendoor.info/" />
+
+  <!-- Favicons (al aanwezig in je project) -->
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Luisterend Oor – AI Governance & Vertrouwenspersoon">
+  <meta property="og:description" content="Verantwoord en toetsbaar AI-gebruik. Governance, compliance en ethiek — eerlijk advies, met aandacht.">
+  <meta property="og:url" content="https://luisterendoor.info/">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://luisterendoor.info/img/og-banner.webp">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="preload" href="/styles.css" as="style" />
+  <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Structured data (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Bas Brinkmann",
+    "url": "https://luisterendoor.info/",
+    "jobTitle": "AI Governance Consultant",
+    "image": "https://luisterendoor.info/img/bas-hero-480.jpg",
+    "sameAs": [
+      "https://www.linkedin.com/in/basbrinkmann/"
+    ]
+  }
+  </script>
+</head>
 <body>
+  <!-- Header / nav -->
   <header class="site-header">
-    <nav class="nav">
+    <div class="container navbar">
       <a class="brand" href="/">Luisterend Oor</a>
-      <div class="links">
-        <a href="/">Home</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav id="site-nav" class="nav">
+        <a href="/" aria-current="page">Home</a>
         <a href="/diensten.html">Diensten</a>
         <a href="/over.html">Over mij</a>
         <a href="/contact.html">Contact</a>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <main class="container" role="main" aria-label="Intro">
-    <section class="card hero">
-      <img
-        class="avatar"
-        src="/img/bas-hero.jpg"
-        alt="Portret van Bas Brinkmann"
-        width="160" height="160"
-        loading="eager" fetchpriority="high" decoding="async" />
+  <!-- Hero -->
+  <main class="container">
+    <section class="card hero" aria-label="Intro">
+      <picture>
+        <!-- WebP first -->
+        <source srcset="/img/bas-hero-320.webp 320w, /img/bas-hero-480.webp 480w, /img/bas-hero-800.webp 800w" type="image/webp" sizes="(max-width: 480px) 120px, 160px">
+        <!-- JPEG fallback -->
+        <source srcset="/img/bas-hero-320.jpg 320w, /img/bas-hero-480.jpg 480w, /img/bas-hero-800.jpg 800w" type="image/jpeg" sizes="(max-width: 480px) 120px, 160px">
+        <img class="avatar" src="/img/bas-hero.jpg" alt="Portret van Bas Brinkmann" width="160" height="160" loading="eager" fetchpriority="high">
+      </picture>
+
       <h1>Luisterend Oor</h1>
       <p class="lead">AI Governance &amp; Vertrouwenspersoon — eerlijk advies, met aandacht.</p>
 
       <div class="actions">
         <a class="button primary" href="/contact.html">✉︎ Plan een kennismaking</a>
-        <a class="button secondary" href="/diensten.html">🧭 Diensten</a>
-        <a class="button secondary" href="/over.html">👤 Over mij</a>
-        <a class="button secondary" href="/privacy.html">🔒 Privacybeleid</a>
+        <a class="button" href="/diensten.html">🛠 Diensten</a>
+        <a class="button" href="/over.html">👤 Over mij</a>
+        <a class="button" href="/privacy.html">🔒 Privacybeleid</a>
       </div>
 
-      <footer class="muted">Beschikbaar voor overheid &amp; financiële sector · 🔎 luisterendoor.info</footer>
+      <p class="micro">Beschikbaar voor overheid &amp; financiële sector · 🔎 luisterendoor.info</p>
     </section>
 
-    <section class="grid3">
-      <article>
-        <h2>Governance</h2>
+    <!-- Diensten preview -->
+    <section class="services">
+      <article class="service card">
+        <h3>Governance</h3>
         <p>Kaders, rollen en processen voor verantwoord AI-gebruik — aansluitend op bestaande besturing.</p>
+        <a class="more" href="/diensten.html#governance" aria-label="Lees meer over Governance">Lees meer →</a>
       </article>
-      <article>
-        <h2>Compliance</h2>
+
+      <article class="service card">
+        <h3>Compliance</h3>
         <p>Praktische vertaling van AI Act en AVG: gap-analyse, controles, audit-trail en rapportage.</p>
+        <a class="more" href="/diensten.html#compliance" aria-label="Lees meer over Compliance">Lees meer →</a>
       </article>
-      <article>
-        <h2>Ethiek</h2>
+
+      <article class="service card">
+        <h3>Ethiek</h3>
         <p>Fairness, transparantie en explainability. Bias-assessments en draagvlak in de organisatie.</p>
+        <a class="more" href="/diensten.html#ethiek" aria-label="Lees meer over Ethiek">Lees meer →</a>
       </article>
+    </section>
+
+    <!-- Tweede CTA -->
+    <section class="cta card" aria-label="Kennismaken">
+      <h2>Klaar om verantwoord AI te versnellen?</h2>
+      <p>Plan direct een kort kennismakingsgesprek. Binnen 15 minuten heb je helder wat de eerstvolgende stap is.</p>
+      <div class="actions">
+        <a class="button primary" href="/contact.html">Plan een kennismaking</a>
+        <a class="button" href="/diensten.html">Bekijk diensten</a>
+      </div>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
-    <nav class="footer-nav">
-      <a href="/">Home</a>
-      <a href="/diensten.html">Diensten</a>
-      <a href="/over.html">Over</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy.html">Privacy</a>
-    </nav>
-    <p class="muted">© 2025 Luisterend Oor</p>
+    <div class="container footer-grid">
+      <nav class="footer-nav">
+        <a href="/">Home</a>
+        <a href="/diensten.html">Diensten</a>
+        <a href="/over.html">Over</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+      </nav>
+      <p>© <span id="y"></span> Luisterend Oor · Bas Brinkmann</p>
+    </div>
   </footer>
+
+  <script>
+    // jaar
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // mobiel nav toggle
+    const btn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('site-nav');
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
 </body>
 </html>
