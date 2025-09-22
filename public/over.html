@@ -4,47 +4,55 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Over Bas Brinkmann – AI Governance Consultant</title>
-  <meta name="description" content="Bas Brinkmann helpt organisaties verantwoord en toetsbaar AI in te zetten. Focus op governance, compliance (AI Act & AVG) en ethiek." />
+  <title>Luisterend Oor – AI Governance & Vertrouwenspersoon</title>
+  <meta name="description" content="Verantwoord en toetsbaar AI-gebruik. Focus op governance, compliance (AI Act & AVG) en ethiek. Eerlijk advies, met aandacht." />
 
-  <link rel="canonical" href="https://luisterendoor.info/over.html" />
+  <link rel="canonical" href="https://luisterendoor.info/" />
 
-  <meta property="og:type" content="profile" />
-  <meta property="og:title" content="Over Bas Brinkmann – AI Governance Consultant" />
-  <meta property="og:description" content="Verantwoord en toetsbaar AI-gebruik: governance, compliance en ethiek." />
-  <meta property="og:url" content="https://luisterendoor.info/over.html" />
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Luisterend Oor" />
+  <meta property="og:title" content="Luisterend Oor – AI Governance & Vertrouwenspersoon" />
+  <meta property="og:description" content="Verantwoord en toetsbaar AI-gebruik. Governance, compliance (AI Act & AVG) en ethiek." />
+  <meta property="og:url" content="https://luisterendoor.info/" />
   <meta property="og:image" content="https://luisterendoor.info/img/og-banner.webp" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Over Bas Brinkmann – AI Governance Consultant" />
-  <meta name="twitter:description" content="Verantwoord en toetsbaar AI-gebruik: governance, compliance en ethiek." />
+  <meta name="twitter:title" content="Luisterend Oor – AI Governance & Vertrouwenspersoon" />
+  <meta name="twitter:description" content="Verantwoord en toetsbaar AI-gebruik. Governance, compliance en ethiek." />
   <meta name="twitter:image" content="https://luisterendoor.info/img/og-banner.webp" />
 
+  <!-- Icons -->
   <link rel="icon" href="/img/favicon.ico" />
   <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
-  <link rel="stylesheet" href="/styles.css" />
 
-  <!-- Structured Data: Person -->
+  <link rel="stylesheet" href="/styles.css?v=2" />
+
+  <!-- Structured Data: Website -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Bas Brinkmann",
-    "jobTitle":"AI Governance Consultant",
-    "url":"https://luisterendoor.info/over.html"
+    "@type":"WebSite",
+    "name":"Luisterend Oor",
+    "url":"https://luisterendoor.info/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://luisterendoor.info/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
   }
   </script>
 </head>
 <body>
   <header class="site-head">
     <nav class="top-nav" aria-label="Hoofdnavigatie">
-      <a href="/">Home</a>
+      <a href="/" aria-current="page">Home</a>
       <a href="/diensten.html">Diensten</a>
-      <a href="/over.html" aria-current="page">Over mij</a>
+      <a href="/over.html">Over mij</a>
       <a href="/contact.html">Contact</a>
     </nav>
   </header>
 
-  <main class="container" role="main" aria-label="Over">
+  <main class="container" role="main" aria-label="Intro">
     <section class="card hero">
       <picture>
         <source srcset="/img/bas-hero-320.webp 320w,
@@ -64,17 +72,34 @@
              loading="eager" fetchpriority="high">
       </picture>
 
-      <h1>Over Bas Brinkmann</h1>
-      <p class="lead">AI Governance Consultant — eerlijk advies, met aandacht.</p>
+      <h1>Luisterend Oor</h1>
+      <p class="lead">AI Governance & Vertrouwenspersoon — eerlijk advies, met aandacht.</p>
 
-      <p class="muted" style="margin-top:12px">
-        Ik help organisaties verantwoord en toetsbaar AI in te zetten. Focus op governance, compliance (AI Act & AVG) en ethiek (fairness & explainability).
-      </p>
-
-      <div class="actions" style="margin-top:16px">
+      <div class="actions">
         <a class="button primary" href="/contact.html">✉︎ Plan een kennismaking</a>
         <a class="button secondary" href="/diensten.html">📋 Diensten</a>
+        <a class="button secondary" href="/over.html">👤 Over mij</a>
+        <a class="button secondary" href="/privacy.html">🔒 Privacybeleid</a>
       </div>
+
+      <footer class="muted">
+        Beschikbaar voor overheid & financiële sector · <span aria-hidden="true">👂</span> luisterendoor.info
+      </footer>
+    </section>
+
+    <section aria-label="Kernexpertise" class="stack">
+      <article>
+        <h2>Governance</h2>
+        <p>Kaders, rollen en processen voor verantwoord AI-gebruik — aansluitend op bestaande besturing.</p>
+      </article>
+      <article>
+        <h2>Compliance</h2>
+        <p>Praktische vertaling van AI Act en AVG: gap-analyse, controles, audit-trail en rapportage.</p>
+      </article>
+      <article>
+        <h2>Ethiek</h2>
+        <p>Fairness, transparantie en explainability. Bias-assessments en draagvlak in de organisatie.</p>
+      </article>
     </section>
   </main>
 

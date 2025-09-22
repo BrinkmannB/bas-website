@@ -177,3 +177,109 @@ footer {
   /* neutraliseer globale img-regels */
   max-width: none;
 }
+/* ====== Luisterend Oor – base styles ====== */
+
+/* System fonts voor snelheid */
+:root{
+  --bg:#0f172a;        /* page background (donkerblauw/grijs) */
+  --bg-2:#111827;      /* cards */
+  --text:#e5e7eb;      /* licht */
+  --muted:#9ca3af;     /* grijs */
+  --brand:#22c55e;     /* groen */
+  --radius:16px;
+  --shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+html{color-scheme:dark}
+body{
+  margin:0;
+  color:var(--text);
+  background:
+    radial-gradient(80rem 80rem at 20% -10%, #1f2937 0%, var(--bg) 60%),
+    var(--bg);
+  min-height:100vh;
+  font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  display:flex; flex-direction:column;
+}
+
+/* Links erven kleur (geen paars/blauw) */
+a{color:inherit; text-decoration:none}
+a:hover{opacity:.9}
+
+/* Container */
+.container{
+  width:100%;
+  max-width:1000px;
+  margin-inline:auto;
+  padding:24px;
+}
+
+/* Top-nav */
+.site-head{padding:12px 24px}
+.top-nav{display:flex; gap:16px; flex-wrap:wrap}
+.top-nav a{opacity:.9}
+.top-nav a[aria-current="page"]{font-weight:700; opacity:1}
+
+/* Kaarten / hero */
+.card{
+  width:100%;
+  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+  border:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(6px);
+  border-radius:var(--radius);
+  padding:32px;
+  box-shadow:var(--shadow);
+}
+.hero{ text-align:center; }
+
+/* Avatar */
+.avatar{
+  display:block;
+  margin:0 auto 16px auto;
+  width:160px; height:160px;
+  border-radius:50%;
+  object-fit:cover;
+  border:2px solid rgba(255,255,255,.15);
+}
+
+/* Typografie */
+h1{margin:0 0 8px; font-size: clamp(28px, 5vw, 40px); letter-spacing:-.02em}
+h2{margin:20px 0 8px; font-size: clamp(20px, 3vw, 24px)}
+.lead{color:var(--muted); font-size:clamp(16px, 2.5vw, 18px)}
+.muted{color:var(--muted)}
+
+/* Stack grid */
+.stack{display:grid; gap:16px; margin-top:20px}
+@media (min-width:800px){
+  .stack{grid-template-columns:repeat(3,1fr)}
+}
+
+/* Knoppen */
+.actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:16px}
+.button{
+  display:inline-flex; align-items:center; gap:8px;
+  padding:12px 18px; border-radius:999px;
+  border:1px solid rgba(255,255,255,.12);
+  font-weight:600; transition:transform .05s ease, background .2s ease, border-color .2s ease;
+}
+.button:hover{transform:translateY(-1px)}
+.button.primary{background:var(--brand); color:#0b141a; border-color:transparent}
+.button.secondary{background:transparent; color:var(--text)}
+
+/* Formulieren */
+.form{display:grid; gap:10px; margin-top:16px}
+.form input,.form textarea{
+  width:100%; padding:10px 12px; border-radius:10px;
+  border:1px solid rgba(255,255,255,.15);
+  background:rgba(255,255,255,.04); color:var(--text);
+}
+.form input:focus,.form textarea:focus{outline:2px solid rgba(255,255,255,.25); outline-offset:2px}
+
+/* Footer */
+.site-foot{margin-top:auto; padding:32px 24px; text-align:center; color:var(--muted)}
+.foot-nav{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:8px}
+
+/* Kleine utility voor lijntje */
+hr{border:0; border-top:1px solid rgba(255,255,255,.1); margin:16px 0}
