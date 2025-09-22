@@ -3,35 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <title>Contact – Plan een kennismaking | Luisterend Oor</title>
-  <meta name="description" content="Vragen of kennismaken? Stuur een bericht via het formulier of mail direct." />
-
+  <title>Contact – Luisterend Oor</title>
+  <meta name="description" content="Stuur een bericht of plan een kennismaking. Ik reageer snel." />
   <link rel="canonical" href="https://luisterendoor.info/contact.html" />
 
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Contact – Plan een kennismaking" />
-  <meta property="og:description" content="Vragen of kennismaken? Stuur een bericht via het formulier of mail direct." />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Luisterend Oor" />
+  <meta property="og:title" content="Contact – Luisterend Oor" />
+  <meta property="og:description" content="Neem contact op voor een kennismaking of vraag." />
   <meta property="og:url" content="https://luisterendoor.info/contact.html" />
-  <meta property="og:image" content="https://luisterendoor.info/img/og-banner.webp" />
+  <meta property="og:image" content="https://luisterendoor.info/img/bas-hero.jpg" />
+
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Contact – Plan een kennismaking" />
-  <meta name="twitter:description" content="Vragen of kennismaken? Stuur een bericht via het formulier of mail direct." />
-  <meta name="twitter:image" content="https://luisterendoor.info/img/og-banner.webp" />
+  <meta name="twitter:title" content="Contact – Luisterend Oor" />
+  <meta name="twitter:description" content="Neem contact op voor een kennismaking of vraag." />
+  <meta name="twitter:image" content="https://luisterendoor.info/img/bas-hero.jpg" />
 
-  <link rel="icon" href="/img/favicon.ico" />
-  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
-
-  <link rel="stylesheet" href="/styles.css?v=2" />
-
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <header class="site-head">
-    <nav class="top-nav" aria-label="Hoofdnavigatie">
-      <a href="/">Home</a>
-      <a href="/diensten.html">Diensten</a>
-      <a href="/over.html">Over mij</a>
-      <a href="/contact.html" aria-current="page">Contact</a>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="/">Luisterend Oor</a>
+      <div class="links">
+        <a href="/">Home</a>
+        <a href="/diensten.html">Diensten</a>
+        <a href="/over.html">Over mij</a>
+        <a aria-current="page" href="/contact.html">Contact</a>
+      </div>
     </nav>
   </header>
 
@@ -40,14 +39,11 @@
       <h1>Contact</h1>
       <p class="lead">Heb je een vraag of wil je een kennismaking plannen? Stuur gerust een bericht.</p>
 
-      <p>E-mail: <a href="mailto:brinkmann.bas@icloud.com">brinkmann.bas@icloud.com</a></p>
-
-      <!-- Netlify form -->
-      <form name="contact" method="POST" data-netlify="true" action="/thanks.html" class="form" netlify>
+      <!-- Netlify Forms -->
+      <form class="form" name="contact" method="POST" data-netlify="true" action="/thanks.html" netlify-honeypot="bot-field" style="margin-top:16px">
         <input type="hidden" name="form-name" value="contact" />
-        <!-- Honeypot (spamprotectie) -->
-        <p style="display:none">
-          <label>Niet invullen: <input name="bot-field" /></label>
+        <p class="hidden">
+          <label>Laat dit veld leeg: <input name="bot-field" /></label>
         </p>
 
         <label for="name">Naam</label>
@@ -63,19 +59,23 @@
           <button class="button primary" type="submit">Verstuur</button>
         </div>
       </form>
+
+      <p class="muted" style="margin-top:12px">
+        Je gegevens worden alleen gebruikt om je bericht te beantwoorden (zie
+        <a href="/privacy.html">privacybeleid</a>).
+      </p>
     </section>
   </main>
 
-  <footer class="site-foot" aria-label="Voettekst">
-    <nav class="foot-nav">
+  <footer class="site-footer">
+    <nav class="footer-nav">
       <a href="/">Home</a>
       <a href="/diensten.html">Diensten</a>
       <a href="/over.html">Over</a>
       <a href="/contact.html">Contact</a>
       <a href="/privacy.html">Privacy</a>
     </nav>
-    <small>© <span id="y"></span> Luisterend Oor</small>
+    <p class="muted">© 2025 Luisterend Oor</p>
   </footer>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
