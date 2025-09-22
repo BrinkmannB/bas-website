@@ -65,12 +65,15 @@
                         /img/bas-hero-800.jpg 800w"
                 type="image/jpeg"
                 sizes="(max-width: 480px) 160px, 240px">
-        <img src="/img/bas-hero.jpg"
-             alt="Portret van Bas Brinkmann"
-             class="avatar"
-             width="160" height="160"
-             loading="eager" fetchpriority="high">
-      </picture>
+                <img
+                class="avatar"
+                src="/img/bas-hero.jpg"
+                alt="Portret van Bas Brinkmann"
+                width="160" height="160"
+                loading="eager" fetchpriority="high" decoding="async"
+                style="display:block; object-fit:cover; border-radius:50%"
+              />
+              
 
       <h1>Luisterend Oor</h1>
       <p class="lead">AI Governance & Vertrouwenspersoon — eerlijk advies, met aandacht.</p>
