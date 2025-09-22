@@ -4,69 +4,76 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- SEO -->
-  <title>Contact – Luisterend Oor</title>
-  <meta name="description" content="Neem contact op met Bas Brinkmann, AI Governance Consultant en vertrouwenspersoon. Plan een kennismaking of stel je vraag." />
+  <title>Contact – Plan een kennismaking | Luisterend Oor</title>
+  <meta name="description" content="Vragen of kennismaken? Stuur een bericht via het formulier of mail direct." />
+
   <link rel="canonical" href="https://luisterendoor.info/contact.html" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Contact – Luisterend Oor">
-  <meta property="og:description" content="Neem contact op met Bas Brinkmann over AI Governance, compliance en ethiek.">
-  <meta property="og:image" content="https://luisterendoor.info/img/og-banner.jpg">
-  <meta property="og:url" content="https://luisterendoor.info/contact.html">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Contact – Plan een kennismaking" />
+  <meta property="og:description" content="Vragen of kennismaken? Stuur een bericht via het formulier of mail direct." />
+  <meta property="og:url" content="https://luisterendoor.info/contact.html" />
+  <meta property="og:image" content="https://luisterendoor.info/img/og-banner.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact – Plan een kennismaking" />
+  <meta name="twitter:description" content="Vragen of kennismaken? Stuur een bericht via het formulier of mail direct." />
+  <meta name="twitter:image" content="https://luisterendoor.info/img/og-banner.webp" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Contact – Luisterend Oor">
-  <meta name="twitter:description" content="Neem contact op met Bas Brinkmann over AI Governance, compliance en ethiek.">
-  <meta name="twitter:image" content="https://luisterendoor.info/img/og-banner.jpg">
-
-  <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-  <!-- Styles -->
+  <link rel="icon" href="/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <header class="site-head">
+    <nav class="top-nav" aria-label="Hoofdnavigatie">
+      <a href="/">Home</a>
+      <a href="/diensten.html">Diensten</a>
+      <a href="/over.html">Over mij</a>
+      <a href="/contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
 
-  <main class="card" role="main" aria-label="Contact">
-    <h1>Contact</h1>
-    <p class="lead">Stuur je vraag of plan een kennismaking.</p>
+  <main class="container" role="main" aria-label="Contact">
+    <section class="card">
+      <h1>Contact</h1>
+      <p class="lead">Heb je een vraag of wil je een kennismaking plannen? Stuur gerust een bericht.</p>
 
-    <!-- Netlify Forms -->
-    <form name="contact" method="POST" data-netlify="true" action="/thanks.html" class="form" style="margin-top:16px">
-      <input type="hidden" name="form-name" value="contact" />
-      <label for="name">Naam</label>
-      <input id="name" name="name" type="text" required />
+      <p>E-mail: <a href="mailto:brinkmann.bas@icloud.com">brinkmann.bas@icloud.com</a></p>
 
-      <label for="email">E-mail</label>
-      <input id="email" name="email" type="email" required />
+      <!-- Netlify form -->
+      <form name="contact" method="POST" data-netlify="true" action="/thanks.html" class="form" netlify>
+        <input type="hidden" name="form-name" value="contact" />
+        <!-- Honeypot (spamprotectie) -->
+        <p style="display:none">
+          <label>Niet invullen: <input name="bot-field" /></label>
+        </p>
 
-      <label for="message">Bericht</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="name">Naam</label>
+        <input id="name" name="name" type="text" required />
 
-      <div class="actions" style="justify-content:flex-start;margin-top:16px">
-        <button class="button primary" type="submit">Verstuur</button>
-      </div>
-    </form>
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required />
 
-    <div class="actions" style="margin-top:16px">
-      <a class="button secondary" href="mailto:brinkmann.bas@icloud.com">✉︎ Mail Bas</a>
-      <a class="button secondary" href="https://www.linkedin.com/in/brinkmannb" target="_blank" rel="noopener">🔗 LinkedIn-profiel</a>
-    </div>
+        <label for="message">Bericht</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <div class="actions" style="justify-content:flex-start;margin-top:16px">
+          <button class="button primary" type="submit">Verstuur</button>
+        </div>
+      </form>
+    </section>
   </main>
 
-  <footer class="muted" style="margin-top:24px;text-align:center;">
-    <nav aria-label="Voetnavigatie">
-      <a href="/">Home</a> ·
-      <a href="/diensten.html">Diensten</a> ·
-      <a href="/over.html">Over</a> ·
-      <a href="/contact.html">Contact</a> ·
+  <footer class="site-foot" aria-label="Voettekst">
+    <nav class="foot-nav">
+      <a href="/">Home</a>
+      <a href="/diensten.html">Diensten</a>
+      <a href="/over.html">Over</a>
+      <a href="/contact.html">Contact</a>
       <a href="/privacy.html">Privacy</a>
     </nav>
+    <small>© <span id="y"></span> Luisterend Oor</small>
   </footer>
-
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>

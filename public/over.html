@@ -4,57 +4,91 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- SEO -->
-  <title>Over Bas Brinkmann – AI Governance Consultant | Luisterend Oor</title>
-  <meta name="description" content="Maak kennis met Bas Brinkmann, AI Governance Consultant. Eerlijk advies met aandacht: governance, compliance en ethiek." />
+  <title>Over Bas Brinkmann – AI Governance Consultant</title>
+  <meta name="description" content="Bas Brinkmann helpt organisaties verantwoord en toetsbaar AI in te zetten. Focus op governance, compliance (AI Act & AVG) en ethiek." />
+
   <link rel="canonical" href="https://luisterendoor.info/over.html" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Over Bas Brinkmann – AI Governance Consultant | Luisterend Oor">
-  <meta property="og:description" content="AI Governance, compliance en ethiek — Bas Brinkmann helpt organisaties verantwoord en toetsbaar AI in te zetten.">
-  <meta property="og:image" content="https://luisterendoor.info/img/og-banner.jpg">
-  <meta property="og:url" content="https://luisterendoor.info/over.html">
-  <meta property="og:type" content="profile">
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Over Bas Brinkmann – AI Governance Consultant" />
+  <meta property="og:description" content="Verantwoord en toetsbaar AI-gebruik: governance, compliance en ethiek." />
+  <meta property="og:url" content="https://luisterendoor.info/over.html" />
+  <meta property="og:image" content="https://luisterendoor.info/img/og-banner.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Over Bas Brinkmann – AI Governance Consultant" />
+  <meta name="twitter:description" content="Verantwoord en toetsbaar AI-gebruik: governance, compliance en ethiek." />
+  <meta name="twitter:image" content="https://luisterendoor.info/img/og-banner.webp" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Over Bas Brinkmann – AI Governance Consultant | Luisterend Oor">
-  <meta name="twitter:description" content="AI Governance, compliance en ethiek — Bas Brinkmann helpt organisaties verantwoord en toetsbaar AI in te zetten.">
-  <meta name="twitter:image" content="https://luisterendoor.info/img/og-banner.jpg">
-
-  <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-  <!-- Styles -->
+  <link rel="icon" href="/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
   <link rel="stylesheet" href="/styles.css" />
+
+  <!-- Structured Data: Person -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Bas Brinkmann",
+    "jobTitle":"AI Governance Consultant",
+    "url":"https://luisterendoor.info/over.html"
+  }
+  </script>
 </head>
 <body>
+  <header class="site-head">
+    <nav class="top-nav" aria-label="Hoofdnavigatie">
+      <a href="/">Home</a>
+      <a href="/diensten.html">Diensten</a>
+      <a href="/over.html" aria-current="page">Over mij</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </header>
 
-  <main class="card" role="main" aria-label="Over Bas Brinkmann">
-    <img src="/img/bas-hero.jpg" alt="Portret van Bas Brinkmann" class="avatar" width="160" height="160" loading="eager" fetchpriority="high">
-    <h1>Over Bas Brinkmann</h1>
-    <p class="lead">AI Governance Consultant — eerlijk advies, met aandacht.</p>
+  <main class="container" role="main" aria-label="Over">
+    <section class="card hero">
+      <picture>
+        <source srcset="/img/bas-hero-320.webp 320w,
+                        /img/bas-hero-480.webp 480w,
+                        /img/bas-hero-800.webp 800w"
+                type="image/webp"
+                sizes="(max-width: 480px) 160px, 240px">
+        <source srcset="/img/bas-hero-320.jpg 320w,
+                        /img/bas-hero-480.jpg 480w,
+                        /img/bas-hero-800.jpg 800w"
+                type="image/jpeg"
+                sizes="(max-width: 480px) 160px, 240px">
+        <img src="/img/bas-hero.jpg"
+             alt="Portret van Bas Brinkmann"
+             class="avatar"
+             width="160" height="160"
+             loading="eager" fetchpriority="high">
+      </picture>
 
-    <p class="muted" style="margin-top:12px">
-      Ik help organisaties verantwoord en toetsbaar AI in te zetten. Focus op governance, compliance (AI Act & AVG) en ethiek (fairness en explainability).
-    </p>
+      <h1>Over Bas Brinkmann</h1>
+      <p class="lead">AI Governance Consultant — eerlijk advies, met aandacht.</p>
 
-    <div class="actions">
-      <a class="button primary" href="/contact.html">✉︎ Plan een kennismaking</a>
-      <a class="button secondary" href="/diensten.html">💼 Diensten</a>
-    </div>
+      <p class="muted" style="margin-top:12px">
+        Ik help organisaties verantwoord en toetsbaar AI in te zetten. Focus op governance, compliance (AI Act & AVG) en ethiek (fairness & explainability).
+      </p>
+
+      <div class="actions" style="margin-top:16px">
+        <a class="button primary" href="/contact.html">✉︎ Plan een kennismaking</a>
+        <a class="button secondary" href="/diensten.html">📋 Diensten</a>
+      </div>
+    </section>
   </main>
 
-  <footer class="muted" style="margin-top:24px;text-align:center;">
-    <nav aria-label="Voetnavigatie">
-      <a href="/">Home</a> ·
-      <a href="/diensten.html">Diensten</a> ·
-      <a href="/over.html">Over</a> ·
-      <a href="/contact.html">Contact</a> ·
+  <footer class="site-foot" aria-label="Voettekst">
+    <nav class="foot-nav">
+      <a href="/">Home</a>
+      <a href="/diensten.html">Diensten</a>
+      <a href="/over.html">Over</a>
+      <a href="/contact.html">Contact</a>
       <a href="/privacy.html">Privacy</a>
     </nav>
+    <small>© <span id="y"></span> Luisterend Oor</small>
   </footer>
-
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+

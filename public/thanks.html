@@ -4,53 +4,58 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- SEO -->
-  <title>Bedankt – Luisterend Oor</title>
-  <meta name="description" content="Bedankt voor je bericht aan Luisterend Oor. We nemen zo snel mogelijk contact met je op." />
+  <title>Bedankt voor je bericht – Luisterend Oor</title>
+  <meta name="description" content="Bedankt voor je bericht. We nemen snel contact met je op." />
+
   <link rel="canonical" href="https://luisterendoor.info/thanks.html" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Bedankt – Luisterend Oor">
-  <meta property="og:description" content="Dank voor je bericht. We reageren zo snel mogelijk.">
-  <meta property="og:image" content="https://luisterendoor.info/img/og-banner.jpg">
-  <meta property="og:url" content="https://luisterendoor.info/thanks.html">
-  <meta property="og:type" content="website">
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Bedankt voor je bericht – Luisterend Oor" />
+  <meta property="og:description" content="We nemen snel contact met je op." />
+  <meta property="og:url" content="https://luisterendoor.info/thanks.html" />
+  <meta property="og:image" content="https://luisterendoor.info/img/og-banner.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Bedankt voor je bericht – Luisterend Oor" />
+  <meta name="twitter:description" content="We nemen snel contact met je op." />
+  <meta name="twitter:image" content="https://luisterendoor.info/img/og-banner.webp" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Bedankt – Luisterend Oor">
-  <meta name="twitter:description" content="Dank voor je bericht. We reageren zo snel mogelijk.">
-  <meta name="twitter:image" content="https://luisterendoor.info/img/og-banner.jpg">
-
-  <!-- Performance -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-
-  <!-- Styles -->
+  <link rel="icon" href="/img/favicon.ico" />
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png" />
   <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
+  <header class="site-head">
+    <nav class="top-nav" aria-label="Hoofdnavigatie">
+      <a href="/">Home</a>
+      <a href="/diensten.html">Diensten</a>
+      <a href="/over.html">Over mij</a>
+      <a href="/contact.html" aria-current="page">Contact</a>
+    </nav>
+  </header>
 
-  <main class="card" role="main" aria-label="Bedankt">
-    <h1>Bedankt!</h1>
-    <p class="lead">Je bericht is ontvangen. Ik reageer zo snel mogelijk.</p>
-
-    <div class="actions" style="margin-top:16px">
-      <a class="button primary" href="/">🏠 Terug naar homepage</a>
-      <a class="button secondary" href="/diensten.html">💼 Bekijk diensten</a>
-    </div>
+  <main class="container" role="main" aria-label="Bedankt">
+    <section class="card">
+      <h1>Bedankt voor je bericht</h1>
+      <p class="lead">We nemen zo snel mogelijk contact met je op.</p>
+      <div class="actions" style="margin-top:16px">
+        <a class="button primary" href="/">Terug naar home</a>
+        <a class="button secondary" href="/diensten.html">Bekijk diensten</a>
+      </div>
+    </section>
   </main>
 
-  <footer class="muted" style="margin-top:24px;text-align:center;">
-    <nav aria-label="Voetnavigatie">
-      <a href="/">Home</a> ·
-      <a href="/diensten.html">Diensten</a> ·
-      <a href="/over.html">Over</a> ·
-      <a href="/contact.html">Contact</a> ·
+  <footer class="site-foot" aria-label="Voettekst">
+    <nav class="foot-nav">
+      <a href="/">Home</a>
+      <a href="/diensten.html">Diensten</a>
+      <a href="/over.html">Over</a>
+      <a href="/contact.html">Contact</a>
       <a href="/privacy.html">Privacy</a>
     </nav>
+    <small>© <span id="y"></span> Luisterend Oor</small>
   </footer>
-
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
+
 
