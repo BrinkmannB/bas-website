@@ -1,285 +1,98 @@
-/* ========= Reset & basis ========= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #0f172a;
-  background-image: radial-gradient(80rem 80rem at 20% -10%, #1f2937 0%, #0f172a 60%);
-  background-attachment: fixed;
-  color: #e5e7eb;
-}
-
-/* ========= Hero card ========= */
-.card {
-  max-width: 840px;
-  margin: 3rem auto;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
-  text-align: center;
-  backdrop-filter: blur(6px);
-}
-
-/* Avatar: altijd perfect rond en niet vervormen */
-.avatar{
-  width: 160px;              /* pas gerust aan (bv. 200) */
-  height: 160px;
-  aspect-ratio: 1 / 1;       /* houdt 'm vierkant */
-  border-radius: 50%;
-  object-fit: cover;         /* snijdt netjes bij i.p.v. rekken */
-  display: block;
-  margin-inline: auto;
-  margin-bottom: 16px;
-}
-
-}
-
-h1 {
-  font-size: clamp(28px, 5vw, 42px);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-  color: #fff;
-}
-
-p.lead {
-  font-size: 1.125rem;
-  color: #9ca3af;
-  margin-bottom: 1.25rem;
-}
-
-/* ========= Buttons ========= */
-.actions {
-  margin-top: 1.5rem;
-  display: flex;
-  gap: 0.75rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-a.button {
-  text-decoration: none;
-  padding: 0.75rem 1.25rem;
-  border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.12);
-  transition: transform .05s ease, background .2s ease, border-color .2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-a.primary {
-  background: #22c55e;
-  color: #0b141a;
-  border-color: transparent;
-}
-a.primary:hover {
-  background: #16a34a;
-}
-
-a.secondary {
-  background: transparent;
-  color: #e5e7eb;
-}
-a.secondary:hover {
-  border-color: #22c55e;
-  color: #22c55e;
-}
-
-footer {
-  margin-top: 1rem;
-  color: #9ca3af;
-  font-size: 0.9rem;
-}
-
-/* ========= Diensten sectie ========= */
-.services {
-  max-width: 1000px;
-  margin: 3rem auto;
-  padding: 0 1.25rem;
-}
-
-.services h2 {
-  text-align: center;
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  color: #fff;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-
-.service-card {
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 16px;
-  padding: 1.5rem;
-  text-align: left;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-}
-
-.service-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 0.75rem;
-  color: #22c55e;
-}
-
-.service-card p {
-  color: #d1d5db;
-  font-size: 0.95rem;
-  margin-bottom: 0.5rem;
-}
-
-.service-card ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.service-card ul li::before {
-  content: "✔";
-  color: #22c55e;
-  margin-right: 0.5rem;
-}
-
-.service-card ul li {
-  margin-bottom: 0.25rem;
-}
-
-/* --- Avatar: altijd perfect rond --- */
-.avatar{
-  width: 160px !important;      /* vaste, gelijke zijden */
-  height: 160px !important;
-  aspect-ratio: 1 / 1;          /* extra zekerheid */
-  border-radius: 50%;
-  object-fit: cover;            /* snijdt bij ipv uitrekken */
-  object-position: center;
-  display: block;
-  margin-inline: auto;
-  margin-bottom: 16px;
-
-  /* neutraliseer globale img-regels */
-  max-width: none;
-}
-/* ====== Luisterend Oor – base styles ====== */
-
-/* System fonts voor snelheid */
+/* === Basis thema ========================================================= */
 :root{
-  --bg:#0f172a;        /* page background (donkerblauw/grijs) */
-  --bg-2:#111827;      /* cards */
-  --text:#e5e7eb;      /* licht */
-  --muted:#9ca3af;     /* grijs */
-  --brand:#22c55e;     /* groen */
+  --bg:#0f172a;          /* achtergrond */
+  --card:#111827;        /* panel */
+  --text:#e5e7eb;        /* tekst */
+  --muted:#9ca3af;       /* secundair */
+  --accent:#22c55e;      /* groen */
+  --soft:#ffffff1a;      /* borders/hover */
   --radius:16px;
-  --shadow:0 10px 30px rgba(0,0,0,.35);
 }
 
 *{box-sizing:border-box}
 html,body{height:100%}
-html{color-scheme:dark}
 body{
   margin:0;
   color:var(--text);
-  background:
-    radial-gradient(80rem 80rem at 20% -10%, #1f2937 0%, var(--bg) 60%),
-    var(--bg);
-  min-height:100vh;
-  font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  display:flex; flex-direction:column;
+  background: radial-gradient(80rem 80rem at 20% -10%, #1f2937 0%, var(--bg) 60%);
+  font:400 16px/1.55 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
 }
 
-/* Links erven kleur (geen paars/blauw) */
-a{color:inherit; text-decoration:none}
-a:hover{opacity:.9}
-
-/* Container */
-.container{
-  width:100%;
-  max-width:1000px;
-  margin-inline:auto;
-  padding:24px;
+/* === Header & nav ======================================================== */
+.site-header{
+  position:sticky; top:0; z-index:10;
+  background:linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,0));
+  backdrop-filter:saturate(140%) blur(4px);
 }
+.nav{
+  max-width:1000px; margin:0 auto;
+  padding:14px 20px;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.nav .brand{
+  text-decoration:none; color:var(--text);
+  font-weight:700; letter-spacing:-.01em;
+}
+.nav .links{display:flex; gap:16px; align-items:center}
+.nav .links a{
+  color:var(--text); text-decoration:none; opacity:.9;
+  padding:6px 8px; border-radius:8px;
+}
+.nav .links a:hover{background:var(--soft); opacity:1}
 
-/* Top-nav */
-.site-head{padding:12px 24px}
-.top-nav{display:flex; gap:16px; flex-wrap:wrap}
-.top-nav a{opacity:.9}
-.top-nav a[aria-current="page"]{font-weight:700; opacity:1}
-
-/* Kaarten / hero */
+/* === Containers / layout ================================================= */
+.container{max-width:1000px; margin:0 auto; padding:24px}
 .card{
-  width:100%;
-  background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
+  background: linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,.02));
   border:1px solid rgba(255,255,255,.08);
-  backdrop-filter:blur(6px);
   border-radius:var(--radius);
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
   padding:32px;
-  box-shadow:var(--shadow);
 }
 .hero{ text-align:center; }
-
-/* Avatar */
 .avatar{
-  display:block;
-  margin:0 auto 16px auto;
-  width:160px; height:160px;
-  border-radius:50%;
-  object-fit:cover;
-  border:2px solid rgba(255,255,255,.15);
+  display:block; margin:0 auto 12px;
+  width:160px; height:160px; object-fit:cover;
+  border-radius:50%; border:2px solid rgba(255,255,255,.15);
 }
 
-/* Typografie */
-h1{margin:0 0 8px; font-size: clamp(28px, 5vw, 40px); letter-spacing:-.02em}
-h2{margin:20px 0 8px; font-size: clamp(20px, 3vw, 24px)}
-.lead{color:var(--muted); font-size:clamp(16px, 2.5vw, 18px)}
+/* === Typografie ========================================================== */
+h1{margin:.25rem 0 .5rem; font-size:clamp(28px,4.5vw,40px); letter-spacing:-.02em}
+h2{margin:0 0 .5rem; font-size:clamp(20px,3.5vw,26px)}
+.lead{color:var(--muted); margin:.25rem 0 1rem;}
 .muted{color:var(--muted)}
 
-/* Stack grid */
-.stack{display:grid; gap:16px; margin-top:20px}
-@media (min-width:800px){
-  .stack{grid-template-columns:repeat(3,1fr)}
-}
-
-/* Knoppen */
-.actions{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:16px}
+/* === Knoppen ============================================================= */
+.actions{margin-top:14px; display:flex; flex-wrap:wrap; gap:10px; justify-content:center}
 .button{
-  display:inline-flex; align-items:center; gap:8px;
-  padding:12px 18px; border-radius:999px;
-  border:1px solid rgba(255,255,255,.12);
-  font-weight:600; transition:transform .05s ease, background .2s ease, border-color .2s ease;
+  text-decoration:none; display:inline-flex; align-items:center; gap:8px; font-weight:600;
+  padding:10px 16px; border-radius:999px; border:1px solid var(--soft);
+  transition:transform .05s ease, background .2s ease, border-color .2s ease;
 }
 .button:hover{transform:translateY(-1px)}
-.button.primary{background:var(--brand); color:#0b141a; border-color:transparent}
-.button.secondary{background:transparent; color:var(--text)}
+.primary{background:var(--accent); color:#0b141a; border-color:transparent}
+.secondary{background:transparent; color:var(--text)}
 
-/* Formulieren */
-.form{display:grid; gap:10px; margin-top:16px}
-.form input,.form textarea{
-  width:100%; padding:10px 12px; border-radius:10px;
-  border:1px solid rgba(255,255,255,.15);
-  background:rgba(255,255,255,.04); color:var(--text);
+/* === Grid blok onder de hero ============================================ */
+.grid3{
+  display:grid; grid-template-columns:repeat(3,1fr); gap:20px;
+  margin:28px auto 0; max-width:1000px; padding:0 24px 24px;
 }
-.form input:focus,.form textarea:focus{outline:2px solid rgba(255,255,255,.25); outline-offset:2px}
+.grid3 article{background:rgba(255,255,255,.02); border:1px solid rgba(255,255,255,.08); border-radius:12px; padding:18px}
 
-/* Footer */
-.site-foot{margin-top:auto; padding:32px 24px; text-align:center; color:var(--muted)}
-.foot-nav{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-bottom:8px}
+/* === Footer ============================================================== */
+.site-footer{margin:40px 0 16px}
+.footer-nav{
+  display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:8px;
+}
+.footer-nav a{color:var(--muted); text-decoration:none}
+.footer-nav a:hover{color:var(--text); text-decoration:underline}
+.site-footer .muted{text-align:center}
 
-/* Kleine utility voor lijntje */
-hr{border:0; border-top:1px solid rgba(255,255,255,.1); margin:16px 0}
+/* === Responsief ========================================================== */
+@media (max-width:900px){
+  .grid3{grid-template-columns:1fr}
+  .nav{padding:12px 16px}
+}
+
+
