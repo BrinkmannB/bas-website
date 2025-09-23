@@ -1,3 +1,8 @@
+git checkout main
+git add public/styles.css public/_redirects
+git commit -m "Fix: styles.css had HTML; herstel echte CSS + check op redirects"
+git push origin main
+
 /contact    /contact.html    200
 /privacy    /privacy.html    200
 /thanks     /thanks.html     200
