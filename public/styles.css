@@ -1,153 +1,48 @@
-/* Basis layout */
-:root {
-  --bg: #0f172a;        /* donkerblauw/grijs */
-  --card: #111827;      /* donker */
-  --text: #e5e7eb;      /* licht */
-  --muted: #9ca3af;     /* grijs */
-  --accent: #22c55e;    /* groen */
-  --radius: 14px;
-}
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bedankt – Luisterend Oor</title>
+  <meta name="description" content="Bedankt voor uw bericht aan Bas Brinkmann – Luisterend Oor. Ik neem zo snel mogelijk contact op.">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="canonical" href="https://luisterendoor.info/thanks.html">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="brand">Luisterend Oor</a>
+  
+      <!-- checkbox-hack: geen JS nodig -->
+      <input id="menu-toggle" type="checkbox" class="menu-toggle" aria-label="Menu openen/sluiten">
+      <label for="menu-toggle" class="hamburger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+  
+      <div class="links">
+        <a href="/index.html">Home</a>
+        <a href="/diensten.html">Diensten</a>
+        <a href="/over.html">Over mij</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+      </div>
+    </nav>
+  </header>
+  
+  <main class="container">
+    <h1>Bedankt!</h1>
+    <p>Uw bericht is succesvol verzonden. Ik neem zo spoedig mogelijk contact met u op.</p>
+  </main>
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  color: var(--text);
-  background: var(--bg);
-  line-height: 1.6;
-}
-
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* Container */
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Navbar */
-header nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 16px;
-  background: #1e293b;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
-}
-
-header nav a {
-  color: var(--text);
-  font-weight: 500;
-}
-
-header nav a.active {
-  color: var(--accent);
-  font-weight: 700;
-}
-
-/* Cards */
-.card {
-  background: var(--card);
-  border-radius: var(--radius);
-  padding: 24px;
-  margin: 18px 0;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-}
-
-.card h2 {
-  margin-top: 0;
-}
-
-/* Hero */
-.hero {
-  text-align: center;
-}
-
-.hero .avatar {
-  border-radius: 50%;
-  margin-bottom: 16px;
-  border: 3px solid var(--accent);
-}
-
-/* Buttons */
-.button {
-  display: inline-block;
-  padding: 10px 18px;
-  border-radius: 999px;
-  border: 1px solid var(--accent);
-  color: var(--text);
-  transition: all 0.2s ease;
-  font-weight: 600;
-  margin: 6px;
-}
-
-.button.primary {
-  background: var(--accent);
-  color: #0f172a;
-  border-color: transparent;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #1e293b;
-  margin-top: 40px;
-}
-
-footer nav {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-footer nav a {
-  color: var(--muted);
-}
-
-footer p {
-  color: var(--muted);
-  font-size: 14px;
-}
-
-/* Formulieren */
-form label {
-  display: block;
-  margin-top: 12px;
-  margin-bottom: 4px;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #374151;
-  background: #0f172a;
-  color: var(--text);
-}
-
-form textarea {
-  resize: vertical;
-}
-
-form button {
-  margin-top: 16px;
-}
+  <footer>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="diensten.html">Diensten</a>
+      <a href="over.html">Over</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p>© 2025 Luisterend Oor</p>
+  </footer>
+</body>
+</html>

@@ -9,15 +9,26 @@
   <link rel="canonical" href="https://luisterendoor.info/privacy.html">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="diensten.html">Diensten</a>
-      <a href="over.html">Over mij</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy.html" class="active">Privacy</a>
+  <header class="site-header">
+    <nav class="nav">
+      <a href="/" class="brand">Luisterend Oor</a>
+  
+      <!-- checkbox-hack: geen JS nodig -->
+      <input id="menu-toggle" type="checkbox" class="menu-toggle" aria-label="Menu openen/sluiten">
+      <label for="menu-toggle" class="hamburger" aria-hidden="true">
+        <span></span><span></span><span></span>
+      </label>
+  
+      <div class="links">
+        <a href="/index.html">Home</a>
+        <a href="/diensten.html">Diensten</a>
+        <a href="/over.html">Over mij</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+      </div>
     </nav>
   </header>
+  
 
   <main class="container">
     <h1>Privacybeleid</h1>
