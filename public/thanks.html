@@ -1,67 +1,37 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bedankt – Luisterend Oor</title>
-  <meta name="description" content="Bedankt voor je bericht. Ik reageer zo snel mogelijk." />
-  <link rel="canonical" href="https://luisterendoor.info/thanks.html" />
-  <link rel="preload" href="/styles.css" as="style" />
-  <link rel="stylesheet" href="/styles.css" />
-  <meta property="og:title" content="Bedankt – Luisterend Oor">
-  <meta property="og:description" content="Je bericht is goed ontvangen.">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://luisterendoor.info/img/og-banner.webp">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="description" content="Bedankt voor uw bericht aan Bas Brinkmann – Luisterend Oor. Ik neem zo snel mogelijk contact op.">
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="canonical" href="https://luisterendoor.info/thanks.html">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container navbar">
-      <a class="brand" href="/">Luisterend Oor</a>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
-        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-      </button>
-      <nav id="site-nav" class="nav">
-        <a href="/">Home</a>
-        <a href="/diensten.html">Diensten</a>
-        <a href="/over.html">Over mij</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-    </div>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="diensten.html">Diensten</a>
+      <a href="over.html">Over mij</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
 
   <main class="container">
-    <section class="card hero" aria-label="Bedankt">
-      <h1>Bedankt!</h1>
-      <p class="lead">Je bericht is ontvangen. Ik reageer zo snel mogelijk.</p>
-      <div class="actions">
-        <a class="button primary" href="/">Terug naar home</a>
-        <a class="button" href="/diensten.html">Bekijk diensten</a>
-      </div>
-    </section>
+    <h1>Bedankt!</h1>
+    <p>Uw bericht is succesvol verzonden. Ik neem zo spoedig mogelijk contact met u op.</p>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <nav class="footer-nav">
-        <a href="/">Home</a>
-        <a href="/diensten.html">Diensten</a>
-        <a href="/over.html">Over</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/privacy.html">Privacy</a>
-      </nav>
-      <p>© <span id="y"></span> Luisterend Oor · Bas Brinkmann</p>
-    </div>
+  <footer>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="diensten.html">Diensten</a>
+      <a href="over.html">Over</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+    <p>© 2025 Luisterend Oor</p>
   </footer>
-
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    const btn = document.querySelector('.nav-toggle');
-    const nav = document.getElementById('site-nav');
-    btn.addEventListener('click', () => {
-      const open = nav.classList.toggle('open');
-      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    });
-  </script>
 </body>
 </html>
