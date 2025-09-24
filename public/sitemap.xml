@@ -30,3 +30,23 @@
     <priority>0.4</priority>
   </url>
 </urlset>
+  <url>
+    <loc>https://luisterendoor.info/blog.html</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://luisterendoor.info/blog/ai-act-financiele-sector.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://luisterendoor.info/blog/ai-governance-in-5-minuten.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://luisterendoor.info/blog/vertrouwenspersoon-veilig-werken.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
