@@ -119,3 +119,21 @@ hr.sep{border:0; height:1px; background:rgba(255,255,255,.08); margin:16px 0}
   .site-header{background:rgba(255,255,255,.7)}
 }
 
+/* Blog/Kennisbank sectie */
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features ul li {
+  margin: 0.5rem 0;
+}
+
+.features a {
+  color: #4da3ff;
+  text-decoration: none;
+}
+
+.features a:hover {
+  text-decoration: underline;
+}
