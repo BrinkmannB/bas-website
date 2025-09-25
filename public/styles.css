@@ -140,3 +140,30 @@ hr.sep{border:0; height:1px; background:rgba(255,255,255,.08); margin:16px 0}
 /* ==== Nieuwsbrief helpers ==== */
 a.muted { color:#95a2ae; text-decoration:none; }
 a.muted:hover { text-decoration:underline; }
+/* Newsletter block */
+.newsletter { text-align: center; margin-top: 2rem; }
+.newsletter p { margin: .5rem 0 1rem; }
+
+.newsletter-form {
+  display: flex;
+  gap: .75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.newsletter-form input[type="email"] {
+  min-width: 260px;
+  padding: .6rem .8rem;
+  border: 1px solid var(--border, #2b2f36);
+  border-radius: .75rem;
+  background: var(--surface, #0f1420);
+  color: inherit;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  left: -10000px;
+  top: auto;
+  width: 1px; height: 1px;
+  overflow: hidden;
+}
