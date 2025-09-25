@@ -137,3 +137,6 @@ hr.sep{border:0; height:1px; background:rgba(255,255,255,.08); margin:16px 0}
 .features a:hover {
   text-decoration: underline;
 }
+/* ==== Nieuwsbrief helpers ==== */
+a.muted { color:#95a2ae; text-decoration:none; }
+a.muted:hover { text-decoration:underline; }
