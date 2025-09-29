@@ -358,14 +358,15 @@ a.muted:hover {
   margin-bottom: 0.75rem;
 }
 .avatar {
-  max-width: 300px;
+  max-width: 160px;
   width: 100%;
   height: auto;
-  border-radius: 16px;
+  border-radius: 50%;
   object-fit: cover;
   border: 3px solid rgba(255, 255, 255, 0.15);
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
   background: #0b141a;
   display: block;
-  margin: 16px auto;
+  margin: 8px auto 14px;
 }
+
