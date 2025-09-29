@@ -2,45 +2,145 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <title>Welcome – Luisterend Oor</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Listening Ear – External Confidential Advisor</title>
-    <style>
-      /* Zelfde CSS als hierboven, kan in aparte styles.css geplaatst worden */
-    </style>
+    <link href="/style.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" />
   </head>
   <body>
-    <header>
-      <nav>
-        <ul class="nav-links">
-          <li><a href="/en/index.html">Home</a></li>
-          <li><a href="/en/services.html">Services</a></li>
-          <li><a href="/en/about.html">About</a></li>
-          <li><a href="/en/knowledge.html">Knowledge Base</a></li>
-          <li><a href="/en/contact.html">Contact</a></li>
-          <li><a href="/en/privacy.html">Privacy</a></li>
-        </ul>
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="/en/index.html">Luisterend Oor</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+        <label for="menu-toggle" class="hamburger">
+          <span></span><span></span><span></span>
+        </label>
+        <div class="links">
+          <a href="/en/services.html">Services</a>
+          <a href="/en/about.html">About</a>
+          <a href="/en/blog.html">Knowledge</a>
+          <a href="/en/contact.html">Contact</a>
+          <a href="/en/privacy.html">Privacy</a>
+          <span>|</span>
+          <a href="/index.html">🇳🇱 NL</a>
+          <a href="/en/index.html">🇬🇧 EN</a>
+        </div>
       </nav>
-      <div class="language-switcher">
-        🌐 <a href="/index.html">🇳🇱 NL</a> | <a href="/en/index.html">🇬🇧 EN</a>
-      </div>
     </header>
 
-    <aside class="sidebar">
-      <h3>Topics</h3>
-      <ul>
-        <li><a href="/en/governance.html">Governance</a></li>
-        <li><a href="/en/compliance.html">Compliance</a></li>
-        <li><a href="/en/ethics.html">Ethics</a></li>
-      </ul>
-    </aside>
+    <main class="container">
+      <section class="hero">
+        <img
+          src="/img/bas-hero.jpg"
+          alt="Portrait of Bas"
+          class="avatar"
+        />
+        <h1>Welcome to Luisterend Oor</h1>
+        <p class="lead">
+          A safe workplace starts with listening. As an external confidential advisor, I help organizations prevent and address undesirable behavior and integrity issues.
+        </p>
+        <div class="actions">
+          <a href="/en/services.html" class="button primary">Explore Services</a>
+          <a href="/en/contact.html" class="button secondary">Get in Touch</a>
+        </div>
+      </section>
 
-    <main>
-      <h1>Welcome to Listening Ear</h1>
-      <p>
-        A safe workplace starts with listening. As an external confidential
-        advisor, I support organizations in preventing and addressing
-        undesirable behavior and integrity issues.
-      </p>
+      <section class="newsletter">
+        <h2>Subscribe to the Newsletter</h2>
+        <p>Get insights about workplace integrity and ethical leadership, directly in your inbox.</p>
+
+        <!-- Begin Mailchimp Signup Form -->
+        <div id="mc_embed_shell">
+          <link
+            href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
+            rel="stylesheet"
+            type="text/css"
+          />
+          <style type="text/css">
+            #mc_embed_signup {
+              background: transparent;
+              clear: left;
+              font: 14px Helvetica, Arial, sans-serif;
+              max-width: 600px;
+              margin: auto;
+            }
+          </style>
+          <div id="mc_embed_signup">
+            <form
+              action="https://luisterendoor.us5.list-manage.com/subscribe/post?u=213eb41b03dbb11068c6385d7&amp;id=f7e1eab632&amp;f_id=005542edf0"
+              method="post"
+              id="mc-embedded-subscribe-form"
+              name="mc-embedded-subscribe-form"
+              class="validate"
+              target="_blank"
+              novalidate
+            >
+              <div id="mc_embed_signup_scroll">
+                <label for="mce-EMAIL">Email Address <span class="asterisk">*</span></label>
+                <input
+                  type="email"
+                  name="EMAIL"
+                  class="required email"
+                  id="mce-EMAIL"
+                  required
+                />
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display: none"></div>
+                  <div class="response" id="mce-success-response" style="display: none"></div>
+                </div>
+                <div
+                  style="position: absolute; left: -5000px"
+                  aria-hidden="true"
+                >
+                  <input
+                    type="text"
+                    name="b_213eb41b03dbb11068c6385d7_f7e1eab632"
+                    tabindex="-1"
+                    value=""
+                  />
+                </div>
+                <div class="clear">
+                  <input
+                    type="submit"
+                    name="subscribe"
+                    id="mc-embedded-subscribe"
+                    class="button primary"
+                    value="Subscribe"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <script
+            type="text/javascript"
+            src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+          ></script>
+          <script type="text/javascript">
+            (function ($) {
+              window.fnames = new Array();
+              window.ftypes = new Array();
+              fnames[0] = "EMAIL";
+              ftypes[0] = "email";
+            })(jQuery);
+            var $mcj = jQuery.noConflict(true);
+          </script>
+        </div>
+        <!--End mc_embed_signup-->
+      </section>
     </main>
+
+    <footer class="site-footer">
+      <nav class="nav">
+        <div class="links">
+          <a href="/en/index.html">Home</a>
+          <a href="/en/services.html">Services</a>
+          <a href="/en/about.html">About</a>
+          <a href="/en/contact.html">Contact</a>
+          <a href="/en/privacy.html">Privacy</a>
+        </div>
+      </nav>
+    </footer>
   </body>
 </html>
+
+
