@@ -1,125 +1,93 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luisterend Oor</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link
-      href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <style>
-      #mc_embed_signup {
-        background: #f9f9f9;
-        clear: left;
-        font: 14px Helvetica, Arial, sans-serif;
-        width: 100%;
-        padding: 2em 1em;
-        margin-top: 3em;
-        border-top: 2px solid #ccc;
-      }
-    </style>
-  </head>
-  <body>
-    <header>...navigatie hier...</header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Luisterend Oor – Vertrouwenspersoon</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/img/favicon.png" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="brand" href="/">Luisterend Oor</a>
+      <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+      <label for="menu-toggle" class="hamburger"><span></span><span></span><span></span></label>
+      <div class="links">
+        <a href="/diensten.html">Diensten</a>
+        <a href="/over.html">Over</a>
+        <a href="/kennisbank.html">Kennisbank</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/en/index.html">🇬🇧 EN</a>
+      </div>
+    </nav>
+  </header>
 
-    <main class="container">
-      <section class="hero">
+  <div class="container section">
+    <aside class="card padded" style="max-width: 200px; float: left; margin-right: 2rem;">
+      <h3>Thema's</h3>
+      <ul>
+        <li><a href="/kennisbank.html#governance">Governance</a></li>
+        <li><a href="/kennisbank.html#compliance">Compliance</a></li>
+        <li><a href="/kennisbank.html#ethiek">Ethiek</a></li>
+      </ul>
+    </aside>
+
+    <main>
+      <div class="grid grid-2" style="align-items: center;">
         <div>
           <h1>Welkom bij Luisterend Oor</h1>
-          <p>
-            Een veilige werkplek begint met luisteren. Als extern
-            vertrouwenspersoon ondersteun ik organisaties bij het voorkomen én
-            oplossen van ongewenste omgangsvormen en integriteitskwesties.
+          <p class="lead">
+            Een veilige werkplek begint met luisteren. Als extern vertrouwenspersoon ondersteun ik organisaties bij het voorkomen én oplossen van ongewenste omgangsvormen en integriteitskwesties.
           </p>
-          <p><a href="/diensten.html">👉 Bekijk mijn diensten</a></p>
-          <p><a href="/contact.html">🗣 Neem contact op</a></p>
+          <div class="actions">
+            <a href="/diensten.html" class="button primary">👉 Bekijk mijn diensten</a>
+            <a href="/contact.html" class="button secondary">📞 Neem contact op</a>
+          </div>
         </div>
-        <img src="/img/bas-hero.jpg" alt="Bas Brinkmann" />
-      </section>
-
-      <!-- ✅ Nieuwsbrief Mailchimp -->
-      <div id="mc_embed_shell">
-        <div id="mc_embed_signup">
-          <form
-            action="https://luisterendoor.us5.list-manage.com/subscribe/post?u=213eb41b03dbb11068c6385d7&amp;id=f7e1eab632&amp;f_id=005542edf0"
-            method="post"
-            id="mc-embedded-subscribe-form"
-            name="mc-embedded-subscribe-form"
-            class="validate"
-            target="_blank"
-          >
-            <div id="mc_embed_signup_scroll">
-              <h2>📬 Abonneer je op mijn nieuwsbrief</h2>
-              <div class="indicates-required">
-                <span class="asterisk">*</span> verplicht veld
-              </div>
-              <div class="mc-field-group">
-                <label for="mce-EMAIL"
-                  >E-mailadres <span class="asterisk">*</span></label
-                >
-                <input
-                  type="email"
-                  name="EMAIL"
-                  class="required email"
-                  id="mce-EMAIL"
-                  required
-                />
-              </div>
-              <div id="mce-responses" class="clear">
-                <div
-                  class="response"
-                  id="mce-error-response"
-                  style="display: none"
-                ></div>
-                <div
-                  class="response"
-                  id="mce-success-response"
-                  style="display: none"
-                ></div>
-              </div>
-              <div style="position: absolute; left: -5000px" aria-hidden="true">
-                <input
-                  type="text"
-                  name="b_213eb41b03dbb11068c6385d7_f7e1eab632"
-                  tabindex="-1"
-                  value=""
-                />
-              </div>
-              <div class="clear">
-                <input
-                  type="submit"
-                  name="subscribe"
-                  id="mc-embedded-subscribe"
-                  class="button"
-                  value="Inschrijven"
-                />
-              </div>
-            </div>
-          </form>
+        <div>
+          <img src="/img/bas-hero.jpg" alt="Bas Brinkmann" style="max-width: 100%; border-radius: var(--radius); box-shadow: var(--shadow);" />
         </div>
       </div>
+
+      <section class="newsletter">
+        <h2>Blijf op de hoogte</h2>
+        <p>Schrijf je in voor de nieuwsbrief van Luisterend Oor</p>
+        <div id="mc_embed_shell">
+          <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
+          <div id="mc_embed_signup">
+            <form action="https://luisterendoor.us5.list-manage.com/subscribe/post?u=213eb41b03dbb11068c6385d7&amp;id=f7e1eab632&amp;f_id=005542edf0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+              <div id="mc_embed_signup_scroll">
+                <label for="mce-EMAIL" class="visually-hidden">E-mailadres</label>
+                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="jij@email.nl" required />
+                <div style="position: absolute; left: -5000px;" aria-hidden="true">
+                  <input type="text" name="b_213eb41b03dbb11068c6385d7_f7e1eab632" tabindex="-1" value="">
+                </div>
+                <input type="submit" value="Inschrijven" name="subscribe" class="button primary" id="mc-embedded-subscribe" />
+              </div>
+            </form>
+          </div>
+          <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+          <script type="text/javascript">
+            (function ($) {
+              window.fnames = new Array(); window.ftypes = new Array();
+              fnames[0] = 'EMAIL'; ftypes[0] = 'email';
+            }(jQuery)); var $mcj = jQuery.noConflict(true);
+          </script>
+        </div>
+      </section>
     </main>
+  </div>
 
-    <footer>...jouw footer...</footer>
-
-    <script
-      type="text/javascript"
-      src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
-    ></script>
-    <script type="text/javascript">
-      (function ($) {
-        window.fnames = new Array();
-        window.ftypes = new Array();
-        fnames[0] = "EMAIL";
-        ftypes[0] = "email";
-      })(jQuery);
-      var $mcj = jQuery.noConflict(true);
-    </script>
-  </body>
+  <footer class="site-footer">
+    <div class="nav">
+      <span>&copy; 2025 Luisterend Oor</span>
+      <div class="links" style="margin-left:auto;">
+        <a href="/privacy.html">Privacy</a>
+        <a href="/en/index.html">🇬🇧 English</a>
+      </div>
+    </div>
+  </footer>
+</body>
 </html>
-
-
-
