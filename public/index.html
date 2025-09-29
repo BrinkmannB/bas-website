@@ -15,6 +15,146 @@
       color: white;
       padding: 1rem;
       display: flex;
-      just
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
 
-      
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .language-switcher {
+      font-size: 0.9rem;
+    }
+
+    .language-switcher a {
+      color: white;
+      text-decoration: none;
+      margin-left: 0.5rem;
+    }
+
+    .sidebar {
+      width: 200px;
+      padding: 1rem;
+      background-color: #f0f0f0;
+      border-right: 1px solid #ccc;
+      height: 100%;
+      position: fixed;
+      top: 70px;
+      left: 0;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 1rem;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #003366;
+    }
+
+    main {
+      margin-left: 220px;
+      padding: 2rem;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 768px) {
+      .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        border-right: none;
+      }
+
+      main {
+        margin-left: 0;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/diensten.html">Diensten</a></li>
+        <li><a href="/over.html">Over</a></li>
+        <li><a href="/kennisbank.html">Kennisbank</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+      </ul>
+    </nav>
+    <div class="language-switcher">
+      🌐 <a href="/index.html">🇳🇱 NL</a> | <a href="/en/index.html">🇬🇧 EN</a>
+    </div>
+  </header>
+
+  <aside class="sidebar">
+    <h3>Thema's</h3>
+    <ul>
+      <li><a href="/governance.html">Governance</a></li>
+      <li><a href="/compliance.html">Compliance</a></li>
+      <li><a href="/ethiek.html">Ethiek</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <section style="display: flex; flex-wrap: wrap; align-items: center; gap: 2rem; background-color: #f7f9fc; padding: 2rem; border-radius: 12px;">
+      <div style="flex: 1; min-width: 280px;">
+        <h1>Welkom bij Luisterend Oor</h1>
+        <p>
+          Een veilige werkplek begint met luisteren. Als extern vertrouwenspersoon ondersteun ik organisaties bij het voorkomen én oplossen van ongewenste omgangsvormen en integriteitskwesties.
+        </p>
+        <p>
+          👉 <strong><a href="/diensten.html">Bekijk mijn diensten</a></strong><br>
+          📬 <strong><a href="/contact.html">Neem contact op</a></strong>
+        </p>
+      </div>
+      <div style="flex: 1; min-width: 280px;">
+        <img src="/img/bas-hero.jpg" alt="Bas Brinkmann – Vertrouwenspersoon" />
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
+
