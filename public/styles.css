@@ -443,3 +443,35 @@ a.muted:hover {
     opacity: 1;
   }
 }
+.contact-box {
+  background-color: #ffffffcc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 400px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+.contact-box a {
+  font-weight: bold;
+  color: #1a1a1a;
+  text-decoration: none;
+}
+.contact-box a:hover {
+  text-decoration: underline;
+}
+.contact-box {
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.contact-box a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-box a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
