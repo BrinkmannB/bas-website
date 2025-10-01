@@ -369,4 +369,62 @@ a.muted:hover {
   display: block;
   margin: 8px auto 14px;
 }
+.avatar {
+  max-width: 160px;
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  background: #e0f4fa;
+  display: block;
+  margin: 24px auto 24px; /* was 8px auto 14px */
+}
+#mc_embed_signup input[type="email"] {
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 250px;
+  max-width: 80%;
+  margin-right: 8px;
+}
+
+#mc_embed_signup input[type="submit"] {
+  background-color: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#mc_embed_signup input[type="submit"]:hover {
+  background-color: #333;
+}
+.theme-box {
+  background: #f9f9f9;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.theme-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+.fade-in {
+  opacity: 0;
+  animation: fadeIn ease 1s forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
 
