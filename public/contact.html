@@ -92,15 +92,14 @@
       </form>
     </main>
 
-    <footer>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="diensten.html">Diensten</a>
-        <a href="over.html">Over</a>
-        <a href="contact.html">Contact</a>
-        <a href="privacy.html">Privacy</a>
-      </nav>
-      <p>© 2025 Luisterend Oor</p>
-    </footer>
+    <div id="footer-placeholder"></div>
+    <script>
+      fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer-placeholder").innerHTML = data;
+        });
+    </script>
+    
   </body>
 </html>
