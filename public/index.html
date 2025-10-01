@@ -9,6 +9,26 @@
   <link rel="icon" href="/img/favicon.png" />
 </head>
 <body>
+  .hero-banner {
+    background: url('/img/hero-bg.jpg') center/cover no-repeat;
+    padding: 100px 20px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.4);
+  }
+  
+  .hero-content p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
+  
   <header class="site-header">
     <nav class="nav">
       <a class="brand" href="/">Luisterend Oor</a>
@@ -34,7 +54,13 @@
         <li><a href="/kennisbank.html#ethiek">Ethiek</a></li>
       </ul>
     </aside>
-
+    <section class="hero-banner">
+      <div class="hero-text">
+        <h1>Welkom bij Luisterend Oor</h1>
+        <p>Voor een veilige, integere en mensgerichte werkplek</p>
+      </div>
+    </section>
+    
     <main>
       <div class="grid grid-2" style="align-items: center;">
         <div>
