@@ -475,3 +475,56 @@ a.muted:hover {
   text-decoration: underline;
   color: #0056b3;
 }
+/* Links in kennisbank */
+main ul a {
+  color: #0044cc;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+main ul a:hover {
+  color: #0077ff;
+  text-decoration: underline;
+}
+
+/* Nieuwsbrief-blok styling */
+.newsletter {
+  background-color: #ffffffdd;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  max-width: 600px;
+  margin-top: 2rem;
+}
+
+.newsletter h2 {
+  margin-bottom: 0.5rem;
+}
+
+.newsletter p {
+  margin-bottom: 1rem;
+}
+
+.newsletter input[type="email"] {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem 0 0 0.5rem;
+  width: 65%;
+  font-size: 1rem;
+}
+
+.newsletter button {
+  padding: 0.6rem 1.2rem;
+  background-color: #15803d;
+  color: white;
+  border: none;
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #166534;
+}
