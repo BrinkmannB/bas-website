@@ -83,14 +83,14 @@
     </main>
   </div>
 
-  <footer class="site-footer">
-    <div class="nav">
-      <span>&copy; 2025 Luisterend Oor</span>
-      <div class="links" style="margin-left:auto;">
-        <a href="/privacy.html">Privacy</a>
-        <a href="/en/index.html">🇬🇧 English</a>
-      </div>
-    </div>
-  </footer>
+  <div id="footer-placeholder"></div>
+<script>
+  fetch("/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script>
+
 </body>
 </html>
