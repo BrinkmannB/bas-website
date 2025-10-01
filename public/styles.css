@@ -1,3 +1,39 @@
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #111827; /* bijna zwart */
+  background-color: #f8fafc; /* lichtgrijs */
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
 /* ===== Design tokens ===== */
 :root {
   --bg: #0f172a; /* donkerblauw/grijs */
