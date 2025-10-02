@@ -1,820 +1,162 @@
-h1,
-h2,
-h3 {
-  font-weight: 600;
-  color: #0f172a;
+/* Basisopmaak */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-p {
-  margin-bottom: 1rem;
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f9f9f9;
 }
 
 a {
-  color: #2563eb;
   text-decoration: none;
+  color: #0066cc;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
-
-body {
-  font-family: "Inter", sans-serif;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #111827; /* bijna zwart */
-  background-color: #f8fafc; /* lichtgrijs */
+ul {
+  list-style: none;
 }
 
-nav {
+/* Navigatie */
+
+.navbar {
   position: sticky;
   top: 0;
-  z-index: 999;
-  background-color: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-/* ===== Design tokens ===== */
-:root {
-  --bg: #0f172a; /* donkerblauw/grijs */
-  --card: #111827; /* donker */
-  --text: #e5e7eb; /* licht */
-  --muted: #9ca3af; /* grijs */
-  --accent: #22c55e; /* groen */
-  --accent-2: #60a5fa; /* blauw */
-  --radius: 16px;
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-}
-
-/* ===== Reset & base ===== */
-* {
-  box-sizing: border-box;
-}
-html,
-body {
-  height: 100%;
-}
-body {
-  margin: 0;
-  color: var(--text);
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(
-    80rem 80rem at 20% -10%,
-    #1f2937 0%,
-    var(--bg) 60%
-  );
-  min-height: 100vh;
+  background-color: #1f1f1f;
+  color: white;
+  padding: 1rem 2rem;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
 }
 
-/* ===== Header / Nav ===== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 20;
-  background: rgba(15, 23, 42, 0.7);
-  backdrop-filter: saturate(140%) blur(8px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+.navbar ul {
+  display: flex;
+  gap: 1rem;
 }
-.nav {
-  max-width: 1040px;
-  margin-inline: auto;
-  padding: 14px 20px;
+
+.navbar li a {
+  color: white;
+  font-weight: 500;
+}
+
+/* Hero Banner */
+
+.hero-banner {
+  background: url('/img/bas-hero.jpg') no-repeat center center;
+  background-size: cover;
+  height: 60vh;
   display: flex;
   align-items: center;
-  gap: 16px;
-}
-.nav .brand {
-  font-weight: 700;
-  letter-spacing: 0.2px;
-  color: var(--text);
-  text-decoration: none;
-}
-.nav a {
-  color: var(--text);
-  text-decoration: none;
-  opacity: 0.9;
-}
-.nav a:hover {
-  opacity: 1;
-}
-.nav .links {
-  margin-left: auto;
-  display: flex;
-  gap: 18px;
-}
-
-/* Mobile hamburger (checkbox hack, geen JS) */
-.menu-toggle {
-  display: none;
-}
-.hamburger {
-  display: none;
-  cursor: pointer;
-}
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: var(--text);
-  margin: 5px 0;
-  opacity: 0.9;
-}
-
-/* ===== Layout container ===== */
-.container {
-  max-width: 1040px;
-  margin: 24px auto;
-  padding: 0 20px;
-  width: 100%;
-}
-
-/* ===== Cards ===== */
-.card {
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.04),
-    rgba(255, 255, 255, 0.02)
-  );
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-}
-
-/* ===== Hero ===== */
-.hero {
-  padding: 28px;
-  text-align: center;
-}
-.avatar {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
-  background: #0b141a;
-  display: block;
-  margin: 8px auto 14px;
-}
-h1 {
-  margin: 0 0 10px;
-  font-size: clamp(26px, 4.5vw, 40px);
-  letter-spacing: -0.02em;
-}
-.lead {
-  margin: 6px 0 14px;
-  color: var(--muted);
-  font-size: clamp(15px, 2.5vw, 17px);
-}
-.actions {
-  margin-top: 12px;
-  display: flex;
-  gap: 10px;
   justify-content: center;
-  flex-wrap: wrap;
+  text-align: center;
+  position: relative;
+}
+
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2rem 3rem;
+  border-radius: 1rem;
+  color: #fff;
+  max-width: 90%;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+}
+
+/* Container Layout */
+
+.container {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h3 {
+  margin-bottom: 1rem;
+}
+
+.content {
+  flex: 1;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 /* Buttons */
+
 .button {
-  text-decoration: none;
-  padding: 10px 16px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  transition: transform 0.05s ease, background 0.2s ease, border-color 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-  color: var(--text);
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  border-radius: 5px;
+  background-color: #008c44;
+  color: white;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
+
 .button:hover {
-  transform: translateY(-1px);
-}
-.primary {
-  background: var(--accent);
-  color: #0b141a;
-  border-color: transparent;
-}
-.secondary {
-  background: transparent;
-}
-.badge {
-  font-size: 12px;
-  padding: 4px 8px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background-color: #00753a;
 }
 
-/* ===== Grids ===== */
-.grid {
-  display: grid;
-  gap: 16px;
-}
-.grid-3 {
-  grid-template-columns: repeat(3, 1fr);
-}
-.section {
-  padding: 22px 0;
-}
-.card.padded {
-  padding: 18px;
-}
-.card h3 {
-  margin: 0 0 6px;
-}
-.card p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 15px;
+.button.outline {
+  background: none;
+  color: #008c44;
+  border: 2px solid #008c44;
+  margin-left: 1rem;
 }
 
-/* CTA sectie */
-.cta {
-  margin-top: 22px;
-  padding: 22px;
-  text-align: center;
-}
-.cta h2 {
-  margin: 0 0 8px;
-  font-size: clamp(22px, 4vw, 28px);
-}
-.cta p {
-  margin: 0 0 14px;
-  color: var(--muted);
+.button.outline:hover {
+  background-color: #e7f7ef;
 }
 
-/* ===== Footer ===== */
-.site-footer {
-  margin-top: auto;
-  color: var(--muted);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-.site-footer .nav {
-  padding: 16px 20px;
-}
-.site-footer a {
-  color: var(--muted);
-  text-decoration: none;
-}
-.site-footer a:hover {
-  color: var(--text);
-}
+/* Responsive */
 
-/* ===== Utilities ===== */
-.muted {
-  color: var(--muted);
-}
-hr.sep {
-  border: 0;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.08);
-  margin: 16px 0;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 920px) {
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-  .hero {
-    padding: 22px;
-  }
-  .nav .links {
-    display: none;
-  }
-  .hamburger {
-    display: block;
-    margin-left: auto;
-  }
-  .menu-toggle:checked ~ .links {
-    display: flex;
-    position: absolute;
-    top: 56px;
-    right: 12px;
-    left: 12px;
-    background: rgba(17, 24, 39, 0.98);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 12px;
-    gap: 12px;
-    flex-direction: column;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --bg: #f4f6fb;
-    --card: #fff;
-    --text: #0b141a;
-    --muted: #374151;
-    --accent: #16a34a;
-  }
-  body {
-    background: radial-gradient(
-      80rem 80rem at 20% -10%,
-      #e6ecff 0%,
-      var(--bg) 60%
-    );
-  }
-  .site-header {
-    background: rgba(255, 255, 255, 0.7);
-  }
-}
-
-/* Blog/Kennisbank sectie */
-.features ul {
-  list-style: none;
-  padding: 0;
-}
-
-.features ul li {
-  margin: 0.5rem 0;
-}
-
-.features a {
-  color: #4da3ff;
-  text-decoration: none;
-}
-
-.features a:hover {
-  text-decoration: underline;
-}
-/* ==== Nieuwsbrief helpers ==== */
-a.muted {
-  color: #95a2ae;
-  text-decoration: none;
-}
-a.muted:hover {
-  text-decoration: underline;
-}
-/* Newsletter block */
-.newsletter {
-  text-align: center;
-  margin-top: 2rem;
-}
-.newsletter p {
-  margin: 0.5rem 0 1rem;
-}
-
-.newsletter-form {
-  display: flex;
-  gap: 0.75rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.newsletter-form input[type="email"] {
-  min-width: 260px;
-  padding: 0.6rem 0.8rem;
-  border: 1px solid var(--border, #2b2f36);
-  border-radius: 0.75rem;
-  background: var(--surface, #0f1420);
-  color: inherit;
-}
-
-.visually-hidden {
-  position: absolute !important;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-.newsletter {
-  margin-top: 2rem;
-}
-.newsletter h2 {
-  font-size: 1.4rem;
-  margin-bottom: 0.5rem;
-}
-.newsletter p {
-  opacity: 0.85;
-  margin-bottom: 0.75rem;
-}
-.avatar {
-  max-width: 160px;
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
-  background: #0b141a;
-  display: block;
-  margin: 8px auto 14px;
-}
-.avatar {
-  max-width: 160px;
-  width: 100%;
-  height: auto;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid rgba(255, 255, 255, 0.15);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
-  background: #e0f4fa;
-  display: block;
-  margin: 24px auto 24px; /* was 8px auto 14px */
-}
-#mc_embed_signup input[type="email"] {
-  padding: 10px 12px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  width: 250px;
-  max-width: 80%;
-  margin-right: 8px;
-}
-
-#mc_embed_signup input[type="submit"] {
-  background-color: #000;
-  color: #fff;
-  border: none;
-  padding: 10px 14px;
-  font-size: 1rem;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#mc_embed_signup input[type="submit"]:hover {
-  background-color: #333;
-}
-.theme-box {
-  background: #f9f9f9;
-  padding: 16px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.theme-box:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-}
-.fade-in {
-  opacity: 0;
-  animation: fadeIn ease 1s forwards;
-  animation-delay: 0.3s;
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-.contact-box {
-  background-color: #ffffffcc;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
-  padding: 1rem 1.5rem;
-  margin: 2rem auto;
-  max-width: 400px;
-  text-align: center;
-  font-size: 1.1rem;
-}
-.contact-box a {
-  font-weight: bold;
-  color: #1a1a1a;
-  text-decoration: none;
-}
-.contact-box a:hover {
-  text-decoration: underline;
-}
-.contact-box {
-  margin-bottom: 1.5rem;
-  font-size: 1.1rem;
-}
-
-.contact-box a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.contact-box a:hover {
-  text-decoration: underline;
-  color: #0056b3;
-}
-/* Links in kennisbank */
-main ul a {
-  color: #0044cc;
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
-}
-
-main ul a:hover {
-  color: #0077ff;
-  text-decoration: underline;
-}
-
-/* Nieuwsbrief-blok styling */
-.newsletter {
-  background-color: #ffffffdd;
-  padding: 1.5rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  max-width: 600px;
-  margin-top: 2rem;
-}
-
-.newsletter h2 {
-  margin-bottom: 0.5rem;
-}
-
-.newsletter p {
-  margin-bottom: 1rem;
-}
-
-.newsletter input[type="email"] {
-  padding: 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem 0 0 0.5rem;
-  width: 65%;
-  font-size: 1rem;
-}
-
-.newsletter button {
-  padding: 0.6rem 1.2rem;
-  background-color: #15803d;
-  color: white;
-  border: none;
-  border-radius: 0 0.5rem 0.5rem 0;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.newsletter button:hover {
-  background-color: #166534;
-}
-/*=====================
-  1. FONTS & BASE STYLES
-=====================*/
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@500&family=Inter:wght@400;600&display=swap");
-
-body {
-  font-family: "Inter", sans-serif;
-  background-color: #f7f9fc;
-  color: #111;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  font-size: 16px;
-  scroll-behavior: smooth;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "IBM Plex Serif", serif;
-  font-weight: 500;
-  margin-bottom: 0.5em;
-  color: #222;
-}
-
-/*=====================
-  2. COLORS & BUTTONS
-=====================*/
-:root {
-  --primary-color: #00796b; /* Petrolgroen */
-  --accent-color: #1565c0; /* Warm blauw */
-  --bg-light: #ffffff;
-  --bg-soft: #f0f4f8;
-  --text-dark: #111;
-  --text-muted: #666;
-}
-
-button,
-.btn {
-  background-color: var(--primary-color);
-  color: white;
-  padding: 0.6em 1.2em;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover,
-.btn:hover {
-  background-color: #005f56;
-  transform: scale(1.03);
-}
-
-/*=====================
-  3. LAYOUT & STRUCTUUR
-=====================*/
-.container {
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 2rem 1.5rem;
-}
-
-.theme-box {
-  background-color: var(--bg-light);
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
-  padding: 1.5rem;
-  margin-bottom: 2rem;
-}
-
-/*=====================
-  4. ANIMATIES & HOVER
-=====================*/
-.fade-in {
-  opacity: 0;
-  animation: fadeIn 0.8s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-a {
-  color: var(--accent-color);
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #0d47a1;
-  text-decoration: underline;
-}
-
-/*=====================
-  5. MOBIELE OPTIMALISATIE
-=====================*/
 @media (max-width: 768px) {
   .container {
-    padding: 1.2rem 1rem;
-  }
-
-  .theme-box {
-    padding: 1.2rem;
-  }
-
-  button,
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  .newsletter-form {
     flex-direction: column;
-    gap: 0.5rem;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
   }
 }
 
-/*=====================
-  6. EXTRA DETAILS
-=====================*/
-input[type="text"],
-input[type="email"],
-textarea {
-  padding: 0.6em;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
-  font-size: 1rem;
-}
-
-input:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 2px rgba(21, 101, 192, 0.2);
-}
-
-/*=====================
-  7. ICONEN
-=====================*/
-.icon {
-  display: inline-block;
-  width: 1.2em;
-  height: 1.2em;
-  margin-right: 0.4em;
-  vertical-align: middle;
-}
-
-/* Suggestie: gebruik Feather Icons of Heroicons in HTML */
-body {
-  background: linear-gradient(135deg, #1e293b, #0f172a);
-  background-image: url("/img/texture-dark.png");
-  background-size: cover;
-  background-attachment: fixed;
-}
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  background: rgba(15, 23, 42, 0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-}
-h1,
-h2,
-h3 {
-  font-family: "Inter", sans-serif;
-  font-weight: 700;
-  letter-spacing: -0.02em;
-}
-
-p,
-li,
-a {
-  font-size: 1.05rem;
-  line-height: 1.6;
-  font-family: "Inter", sans-serif;
-}
-.fade-in {
-  animation: fadeIn 1s ease-out forwards;
-  opacity: 0;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-.hero-banner {
-  background-image: url("/img/bas-hero.jpg");
-
-  background-size: cover;
-  background-position: center;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.hero-text {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 1rem;
-}
-
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-}
-.hero-banner {
-  background-image: url("/img/bas-hero.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 50vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.hero-text {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 2rem;
-  border-radius: 1rem;
-}
-
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-}
