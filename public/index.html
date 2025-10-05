@@ -1,53 +1,87 @@
 <!DOCTYPE html>
 <html lang="nl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Luisterend Oor – Vertrouwenspersoon</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header class="navbar">
-      <div class="logo">Luisterend Oor</div>
-      <nav>
-        <ul>
-          <li><a href="/diensten.html">Diensten</a></li>
-          <li><a href="/over.html">Over</a></li>
-          <li><a href="/kennisbank.html">Kennisbank</a></li>
-          <li><a href="/contact.html">Contact</a></li>
-          <li><a href="/privacy.html">Privacy</a></li>
-          <li><a href="/en/index.html">🇬🇧 EN</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luisterend Oor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">Luisterend Oor</div>
+    <nav>
+      <ul>
+        <li><a href="diensten.html">Diensten</a></li>
+        <li><a href="over.html">Over</a></li>
+        <li><a href="kennisbank.html">Kennisbank</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="#" class="lang-switch">🇬🇧 EN</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="hero-banner">
-      <div class="hero-text">
-        <h1>Welkom bij Luisterend Oor</h1>
-        <p>Voor een veilige, integere en mensgerichte werkplek</p>
+  <section class="hero-banner">
+    <div class="hero-text">
+      <h1>Welkom bij Luisterend Oor</h1>
+      <p>Voor een veilige, integere en mensgerichte werkplek</p>
+    </div>
+  </section>
+
+  <main class="grid">
+    <aside class="sidebar">
+      <h3>Thema’s</h3>
+      <ul>
+        <li><a href="#">Governance</a></li>
+        <li><a href="#">Compliance</a></li>
+        <li><a href="#">Ethiek</a></li>
+      </ul>
+    </aside>
+
+    <section class="intro">
+      <h2>Welkom bij Luisterend Oor</h2>
+      <p>Een veilige werkplek begint met luisteren. Als extern vertrouwenspersoon ondersteun ik organisaties bij het voorkomen én oplossen van ongewenste omgangsvormen en integriteitskwesties.</p>
+      <div class="cta-buttons">
+        <a href="diensten.html" class="btn green">Bekijk mijn diensten</a>
+        <a href="contact.html" class="btn white">Neem contact op</a>
       </div>
     </section>
+  </main>
 
-    <main class="container">
+  <!-- English version -->
+  <section class="hidden lang-en">
+    <div class="hero-text">
+      <h1>Welcome to Luisterend Oor</h1>
+      <p>For a safe, ethical and people-oriented workplace</p>
+    </div>
+
+    <main class="grid">
       <aside class="sidebar">
-        <h3>Thema's</h3>
+        <h3>Topics</h3>
         <ul>
-          <li><a href="/kennisbank.html#governance">Governance</a></li>
-          <li><a href="/kennisbank.html#compliance">Compliance</a></li>
-          <li><a href="/kennisbank.html#ethiek">Ethiek</a></li>
+          <li><a href="#">Governance</a></li>
+          <li><a href="#">Compliance</a></li>
+          <li><a href="#">Ethics</a></li>
         </ul>
       </aside>
 
-      <section class="content">
-        <h2>Welkom bij Luisterend Oor</h2>
-        <p>
-          Een veilige werkplek begint met luisteren. Als extern vertrouwenspersoon ondersteun ik organisaties bij het voorkomen én oplossen van ongewenste omgangsvormen en integriteitskwesties.
-        </p>
+      <section class="intro">
+        <h2>Welcome to Luisterend Oor</h2>
+        <p>A safe workplace starts with listening. As an external confidential advisor, I support organisations in preventing and resolving undesirable behaviour and integrity issues.</p>
         <div class="cta-buttons">
-          <a href="/diensten.html" class="button">✅ Bekijk mijn diensten</a>
-          <a href="/contact.html" class="button outline">📞 Neem contact op</a>
+          <a href="diensten.html" class="btn green">View my services</a>
+          <a href="contact.html" class="btn white">Get in touch</a>
         </div>
       </section>
     </main>
-  </body>
+  </section>
+
+  <script>
+    // Toggle language view (basic)
+    document.querySelector('.lang-switch').addEventListener('click', function(e) {
+      e.preventDefault();
+      document.body.classList.toggle('english');
+    });
+  </script>
+</body>
 </html>
