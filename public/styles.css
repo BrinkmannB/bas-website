@@ -1,11 +1,22 @@
+:root {
+  --bg: #1a1a2e;
+  --card: #16213e;
+  --text: #f1f1f1;
+  --muted: #b0b4c1;
+  --accent: #e94560;     /* helder warm accent (roze-rood) */
+  --accent-2: #0f3460;   /* diepblauw voor buttons e.d. */
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
 /* Algemene basisinstellingen */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #f8f9fa;
-  color: #111;
+  background-color: var(--bg);     /* ← dit zorgt voor juiste achtergrondkleur */
+  color: var(--text);              /* ← en deze voor de tekstkleur */
   line-height: 1.6;
 }
+
 
 a {
   color: #0066cc;
@@ -154,6 +165,30 @@ footer {
   .hero-text p {
     font-size: 1rem;
   }
+}
+.button.primary {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+}
+.button.secondary {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px;
+}
+
+.site-footer {
+  background: var(--card);
+  color: var(--muted);
+  padding: 20px 0;
 }
 
 
