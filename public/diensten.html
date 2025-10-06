@@ -1,123 +1,58 @@
+<!-- START vernieuwde dienstenpagina -->
+<!-- diensten.html -->
 <!DOCTYPE html>
 <html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Diensten – Luisterend Oor</title>
-    <meta
-      name="description"
-      content="Bekijk de diensten van Bas Brinkmann – AI Governance & Vertrouwenspersoon. Voor overheid en financiële sector."
-    />
-    <link rel="canonical" href="https://luisterendoor.info/diensten.html" />
-    <link rel="stylesheet" href="/styles.css" />
-
-    <!-- Plausible Analytics -->
-    <script
-      defer
-      data-domain="luisterendoor.info"
-      src="https://plausible.io/js/script.js"
-    ></script>
+    <title>Diensten | Luisterend Oor</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
-
   <body>
-    <header class="site-header">
-      <nav class="nav">
-        <a href="/" class="brand">Luisterend Oor</a>
-
-        <!-- checkbox-hack: geen JS nodig -->
-        <input
-          id="menu-toggle"
-          type="checkbox"
-          class="menu-toggle"
-          aria-label="Menu openen/sluiten"
-        />
-        <label for="menu-toggle" class="hamburger" aria-hidden="true">
-          <span></span><span></span><span></span>
-        </label>
-
-        <div class="links">
-          <a href="/index.html">Home</a>
-          <a href="/diensten.html">Diensten</a>
-          <a href="/over.html">Over mij</a>
-          <a href="/contact.html">Contact</a>
-          <a href="/privacy.html">Privacy</a>
-        </div>
+    <header>
+      <nav class="navbar">
+        <h1>Luisterend Oor</h1>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="voorbeelden.html">Voorbeelden</a></li>
+          <li><a href="kennisbank.html">Kennisbank</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="/en/index.html">🇬🇧 EN</a></li>
+        </ul>
       </nav>
     </header>
 
     <main class="container">
-      <h1>Diensten</h1>
+      <h2>Onze Diensten</h2>
 
-      <section class="card">
-        <h2>Governance</h2>
+      <section class="dienst">
+        <h3>🌐 AI Governance Audit</h3>
         <p>
-          Kaders, rollen en processen voor verantwoord AI-gebruik — aansluitend
-          op bestaande besturing.
+          Beoordeling van bestaande AI-toepassingen op transparantie, bias,
+          ethiek en naleving van wet- en regelgeving.
         </p>
       </section>
 
-      <section class="card">
-        <h2>Compliance</h2>
+      <section class="dienst">
+        <h3>🧭 Implementatiebegeleiding</h3>
         <p>
-          Praktische vertaling van AI Act en AVG: gap-analyse, controles,
-          audit-trail en rapportage.
+          Begeleiding bij het verantwoord ontwerpen, testen en uitrollen van
+          nieuwe AI-systemen met oog voor mens en maatschappij.
         </p>
       </section>
 
-      <section class="card">
-        <h2>Ethiek</h2>
+      <section class="dienst">
+        <h3>👂 Vertrouwenspersoon</h3>
         <p>
-          Fairness, transparantie en explainability. Bias-assessments en
-          draagvlak in de organisatie.
+          Ondersteuning bij integriteit, veiligheid en het omgaan met ongewenste
+          omgangsvormen op de werkvloer.
         </p>
       </section>
     </main>
-    <!-- Newsletter block -->
-    <section class="card newsletter" aria-labelledby="nl-title">
-      <h2 id="nl-title">Blijf op de hoogte</h2>
-      <p>
-        Korte updates over AI governance, compliance & ethiek — 1× per maand.
-      </p>
 
-      <form
-        class="newsletter-form"
-        action="https://luisterendoor.us5.list-manage.com/subscribe/post?u=213eb41b03dbb11068c6385d7&amp;id=f7e1eab632&amp;f_id=005542edf0"
-        method="post"
-        target="_blank"
-        novalidate
-      >
-        <label for="nl-email" class="visually-hidden">E-mailadres</label>
-        <input
-          type="email"
-          id="nl-email"
-          name="EMAIL"
-          placeholder="jouw@voorbeeld.nl"
-          required
-        />
-
-        <!-- honeypot -->
-        <div style="position: absolute; left: -5000px" aria-hidden="true">
-          <input
-            type="text"
-            name="b_213eb41b03dbb11068c6385d7_f7e1eab632"
-            tabindex="-1"
-            value=""
-          />
-        </div>
-
-        <button type="submit" class="button primary">Inschrijven</button>
-      </form>
-
-      <small>Geen spam. Uitschrijven kan altijd.</small>
-    </section>
-
-    <div id="footer-placeholder"></div>
-    <script>
-      fetch("footer.html")
-        .then((response) => response.text())
-        .then((data) => {
-          document.getElementById("footer-placeholder").innerHTML = data;
-        });
-    </script>
+    <footer>
+      <p>&copy; 2025 Luisterend Oor</p>
+    </footer>
   </body>
 </html>
+<!-- EINDE vernieuwde dienstenpagina -->
