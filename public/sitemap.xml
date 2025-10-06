@@ -1,57 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Nederlandse pagina's -->
   <url>
     <loc>https://luisterendoor.info/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <url>
-    <loc>https://luisterendoor.info/diensten.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
   <url>
     <loc>https://luisterendoor.info/over.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
+  <url>
+    <loc>https://luisterendoor.info/diensten.html</loc>
+  </url>
   <url>
     <loc>https://luisterendoor.info/contact.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
-
   <url>
-    <loc>https://luisterendoor.info/privacy.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
+    <loc>https://luisterendoor.info/cases.html</loc>
   </url>
-</urlset>
   <url>
     <loc>https://luisterendoor.info/blog.html</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+  </url>
+
+  <!-- Engelse pagina's -->
+  <url>
+    <loc>https://luisterendoor.info/en/index.html</loc>
   </url>
   <url>
-    <loc>https://luisterendoor.info/blog/ai-act-financiele-sector.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://luisterendoor.info/en/over.html</loc>
   </url>
   <url>
-    <loc>https://luisterendoor.info/blog/ai-governance-in-5-minuten.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://luisterendoor.info/en/services.html</loc>
   </url>
   <url>
-    <loc>https://luisterendoor.info/blog/vertrouwenspersoon-veilig-werken.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <loc>https://luisterendoor.info/en/contact.html</loc>
   </url>
-<url>
-  <loc>https://luisterendoor.info/en/knowledge.html</loc>
-  <changefreq>weekly</changefreq>
-  <priority>0.6</priority>
-</url>
+  <url>
+    <loc>https://luisterendoor.info/en/cases.html</loc>
+  </url>
+  <url>
+    <loc>https://luisterendoor.info/en/blog.html</loc>
+  </url>
+</urlset>
