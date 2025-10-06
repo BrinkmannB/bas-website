@@ -1,63 +1,71 @@
-/* CASES STYLES */
+:root {
+  --primary: #1a3e5f; /* diep blauwgroen */
+  --accent: #46a094; /* zacht groenblauw */
+  --background: #eef4f3; /* lichte, frisse achtergrond */
+  --text: #222222; /* bijna zwart, goed leesbaar */
+  --link: #145a7a; /* diepe blauw voor links */
+  --link-hover: #1b7b91;
+  --card: #ffffff;
+  --radius: 8px;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f3f8f6;
-  color: #1a2e35;
-  line-height: 1.6;
   margin: 0;
-  padding: 0;
-  background-image: url('/img/abstract-bg.svg');
-  background-repeat: no-repeat;
-  background-position: top right;
-  background-size: 400px auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  line-height: 1.7;
 }
 
-.container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
+main {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 1rem;
 }
 
-h1, h2 {
-  color: #145c8b;
+h1,
+h2,
+h3 {
+  color: var(--primary);
 }
 
-.case {
-  background-color: white;
-  border-radius: 12px;
-  padding: 30px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  border-left: 5px solid #2f8d8a;
+a {
+  color: var(--link);
+  text-decoration: none;
 }
 
-.case h2 {
-  margin-top: 0;
-  font-size: 1.5em;
-}
-
-.case .quote {
-  font-style: italic;
-  color: #4a6e74;
-  margin: 20px 0;
-  border-left: 4px solid #a3d2ca;
-  padding-left: 16px;
-}
-
-.cta {
-  background-color: #2f8d8a;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  border-radius: 8px;
-  margin-top: 40px;
-}
-
-.cta a {
-  color: white;
+a:hover {
   text-decoration: underline;
-  font-weight: bold;
+  color: var(--link-hover);
 }
 
+header,
+nav {
+  padding: 1rem;
+  background-color: var(--card);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  max-width: 700px;
+  margin: 2rem auto 1rem auto;
+}
 
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
 
+nav ul li {
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #666;
+  padding: 2rem 0;
+}
