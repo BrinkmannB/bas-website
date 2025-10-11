@@ -1,3 +1,4 @@
+/* === Kleuren & Thema === */
 :root {
   --primary: #1a3e5f; /* diep blauwgroen */
   --accent: #46a094; /* zacht groenblauw */
@@ -6,28 +7,22 @@
   --link: #145a7a; /* diepe blauw voor links */
   --link-hover: #1b7b91;
   --card: #ffffff;
+  --muted: #dbe9e7; /* zachte grijs-groene tint */
   --radius: 8px;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
+/* === Basis === */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--background);
   color: var(--text);
   line-height: 1.7;
 }
 
-main {
-  max-width: 700px;
-  margin: 3rem auto;
-  padding: 1rem;
-}
-
-h1,
-h2,
-h3 {
+/* === Typografie === */
+h1, h2, h3 {
   color: var(--primary);
 }
 
@@ -41,17 +36,15 @@ a:hover {
   color: var(--link-hover);
 }
 
-header,
-nav {
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background-color: #f9fdfc; /* Of je gewenste achtergrondkleur */
-    padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  }
-  
+/* === Layout === */
+main {
+  max-width: 700px;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+/* === Navigatie === */
+header {
   padding: 1rem;
   background-color: var(--card);
   box-shadow: var(--shadow);
@@ -59,6 +52,46 @@ nav {
   max-width: 700px;
   margin: 2rem auto 1rem auto;
 }
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #f9fdfc;
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav ul li {
+  margin: 0;
+}
+
+/* === Banner === */
+.banner {
+  background: linear-gradient(135deg, #e0f7fa, #f1f8f9);
+  padding: 1rem 0;
+  text-align: center;
+  margin-bottom: 2rem;
+  border-radius: 16px;
+}
+
+.banner img {
+  width: 100%;
+  max-width: 960px;
+  border-radius: 16px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* === Footer === */
 .site-footer {
   background-color: #f5f5f5;
   padding: 2rem;
@@ -78,40 +111,30 @@ nav {
   text-decoration: underline;
 }
 
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-nav ul li {
-  margin: 0;
-}
-
 footer {
   text-align: center;
   font-size: 0.9rem;
   color: #666;
   padding: 2rem 0;
 }
-.responsive-banner {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  margin-bottom: 2rem;
-}
-.banner {
-  background-color: var(--muted);
-  padding: 1rem;
-  text-align: center;
-}
 
-.banner img {
-  width: 100%;
-  max-width: 960px;
-  border-radius: 16px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+/* === Responsiviteit === */
+@media (max-width: 768px) {
+  main {
+    margin: 1rem;
+  }
+
+  header {
+    margin: 1rem;
+  }
+
+  .banner img {
+    max-width: 100%;
+    border-radius: 8px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
 }
