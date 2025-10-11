@@ -15,14 +15,17 @@
 /* === Basis === */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif;
   background-color: var(--background);
   color: var(--text);
   line-height: 1.7;
 }
 
 /* === Typografie === */
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   color: var(--primary);
 }
 
@@ -137,4 +140,43 @@ footer {
     flex-direction: column;
     gap: 0.5rem;
   }
+}
+/* --- Hero banner section --- */
+.hero-banner {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3rem;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.hero-banner img.banner-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-banner .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
+  background: rgba(26, 62, 95, 0.4); /* jouw blauw, semi-transparant */
+  padding: 1.5rem 2rem;
+  border-radius: 8px;
+}
+
+.hero-banner h1 {
+  margin: 0 0 0.5rem 0;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.hero-banner p {
+  font-size: 1.2rem;
+  margin: 0;
+  font-weight: 400;
 }
