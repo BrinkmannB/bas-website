@@ -240,3 +240,96 @@ footer {
 .cta-block a.btn.primary:hover {
   background: #e0f7fa;
 }
+/* --- Hero (compacter, betere leesbaarheid) --- */
+.hero {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  margin: 2rem 0 2.5rem;
+  box-shadow: var(--shadow);
+}
+
+.hero--compact .hero__inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: clamp(2rem, 5vw, 3.5rem) clamp(1rem, 3vw, 2rem);
+}
+
+.hero__inner h1 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+  color: #0a3e57;
+  text-wrap: balance;
+}
+
+.hero__sub {
+  margin: 0 auto 1rem;
+  max-width: 760px;
+  color: #0e5069;
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+}
+
+.hero__cta {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Buttons in hero */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 10px;
+  padding: 0.7rem 1.1rem;
+  font-weight: 600;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.btn--primary {
+  background: var(--primary);
+  color: #fff;
+  border-color: transparent;
+}
+
+.btn--ghost {
+  background: #fff;
+  color: var(--primary);
+}
+
+/* Achtergrondbeeld met subtiele overlay voor contrast */
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.hero__bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  /* zachte overlay zodat tekst altijd leesbaar is op de banner */
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.65) 0%,
+    rgba(255, 255, 255, 0.55) 40%,
+    rgba(255, 255, 255, 0.65) 100%
+  );
+}
+
+/* Mobiel iets compacter */
+@media (max-width: 768px) {
+  .hero__cta .btn {
+    width: 100%;
+    text-align: center;
+  }
+}
