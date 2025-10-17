@@ -1,7 +1,4 @@
 {
-  "name": "bas-website",
-  "private": true,
-  "version": "1.0.0",
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -10,7 +7,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "echo 'Building Luisterend Oor site...' && react-scripts build && node backup.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -21,4 +18,5 @@
     "not op_mini all"
   ]
 }
+
 

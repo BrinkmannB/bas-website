@@ -1,9 +1,18 @@
-[build]
-publish = "public"
-command = ""
+# Netlify configuratie voor Luisterend Oor
+# Bouwt de site en maakt daarna automatisch een backup naar Google Cloud
 
-# Handig voor SPA/React routes; schaadt niets bij een statische site
+[build]
+  publish = "public"
+  command = "npm run build && node backup.js"
+
+# Handig voor SPA of statische routes; schaadt niks bij een statische site
 [[redirects]]
-from = "/*"
-to = "/index.html"
-status = 200
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  GCP_BUCKET_NAME = "luisterendoor-backup"
+  GCP_PROJECT_ID = "luisterendoor-backup"
+  # Voeg je sleutel toe in Netlify (Dashboard → Environment variables)
+  # GCP_SERVICE_ACCOUNT_KEY = {wordt daar ingevuld, niet hier}
