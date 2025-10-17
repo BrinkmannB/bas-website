@@ -1,65 +1,77 @@
-/**
- * backup.js
- * Automatische Google Cloud backup voor Luisterend Oor
- * Gebruikt service account key uit Netlify environment variable
- */
+// === backup.js ===
+// Automatische back-up van de /public map naar Google Cloud Storage
+// Compatibel met Netlify en CommonJS (Node 18)
 
-import { Storage } from "@google-cloud/storage";
-import fs from "fs";
-import archiver from "archiver";
-import path from "path";
+const { Storage } = require("@google-cloud/storage");
+const fs = require("fs");
+const path = require("path");
+const archiver = require("archiver");
 
-// Variabelen uit Netlify (via Environment variables)
+// === Configuratie uit Netlify Environment Variables ===
 const bucketName = process.env.GCP_BUCKET_NAME;
 const projectId = process.env.GCP_PROJECT_ID;
-const key = process.env.GCP_SERVICE_ACCOUNT_KEY;
+const serviceAccountKey = process.env.GCP_SERVICE_ACCOUNT_KEY;
 
-if (!bucketName || !projectId || !key) {
-  console.error("❌ Fout: ontbrekende environment variabelen.");
+// === Controlestap ===
+if (!bucketName || !projectId || !serviceAccountKey) {
+  console.error("❌ Ontbrekende environment variables. Controleer GCP_* instellingen in Netlify.");
   process.exit(1);
 }
 
-// JSON sleutel parsen
-let credentials;
-try {
-  credentials = JSON.parse(key);
-} catch (err) {
-  console.error("❌ Ongeldige JSON in GCP_SERVICE_ACCOUNT_KEY:", err);
-  process.exit(1);
-}
+// === JSON-sleutel tijdelijk schrijven ===
+const keyFilePath = path.join(__dirname, "gcp-key.json");
+fs.writeFileSync(keyFilePath, serviceAccountKey);
 
-// Initialiseer Google Cloud client
+// === Google Cloud Storage initialiseren ===
 const storage = new Storage({
   projectId,
-  credentials,
+  keyFilename: keyFilePath,
 });
 
-// Bestandsnamen
-const backupDir = "public";
+// === Map en bestandsnamen ===
+const sourceDir = path.join(__dirname, "public");
 const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
-const zipFileName = `luisterendoor-backup-${timestamp}.zip`;
-const outputPath = path.join(process.cwd(), zipFileName);
+const archiveName = `luisterendoor-backup-${timestamp}.zip`;
+const archivePath = path.join(__dirname, archiveName);
 
-// ZIP aanmaken
-console.log("📦 Start backup van public/");
-const output = fs.createWriteStream(outputPath);
-const archive = archiver("zip", { zlib: { level: 9 } });
+// === ZIP maken ===
+function createZip(source, out) {
+  return new Promise((resolve, reject) => {
+    const output = fs.createWriteStream(out);
+    const archive = archiver("zip", { zlib: { level: 9 } });
 
-archive.pipe(output);
-archive.directory(backupDir, false);
-await archive.finalize();
+    output.on("close", () => resolve());
+    archive.on("error", err => reject(err));
 
-// Upload naar bucket
-output.on("close", async () => {
+    archive.pipe(output);
+    archive.directory(source, false);
+    archive.finalize();
+  });
+}
+
+// === Uploaden naar GCP ===
+async function uploadToGCP() {
   try {
-    await storage.bucket(bucketName).upload(outputPath, {
-      destination: `backups/${zipFileName}`,
-    });
-    console.log(`✅ Backup voltooid: ${zipFileName} geüpload naar ${bucketName}`);
-    fs.unlinkSync(outputPath); // lokaal zip-bestand verwijderen
-  } catch (err) {
-    console.error("❌ Upload mislukt:", err);
-    process.exit(1);
-  }
-});
+    console.log("📦 Start backup van:", sourceDir);
+    await createZip(sourceDir, archivePath);
+    console.log("✅ ZIP gemaakt:", archiveName);
 
+    const bucket = storage.bucket(bucketName);
+    await bucket.upload(archivePath, {
+      destination: `backups/${archiveName}`,
+      gzip: true,
+    });
+
+    console.log(`✅ Backup geüpload naar Google Cloud Storage: gs://${bucketName}/backups/${archiveName}`);
+  } catch (err) {
+    console.error("❌ Fout bij uploaden:", err);
+    process.exit(1);
+  } finally {
+    // Opruimen
+    if (fs.existsSync(archivePath)) fs.unlinkSync(archivePath);
+    if (fs.existsSync(keyFilePath)) fs.unlinkSync(keyFilePath);
+  }
+}
+
+// === Start het proces ===
+uploadToGCP();
