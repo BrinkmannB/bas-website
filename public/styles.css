@@ -515,3 +515,9 @@ footer {
   color: var(--primary);
   margin-bottom: 0.75rem;
 }
+/* Highlight de actieve navigatielink */
+nav .links a.active {
+  color: #4bae9d; /* jouw groenaccent */
+  font-weight: bold;
+  border-bottom: 2px solid #4bae9d;
+}
