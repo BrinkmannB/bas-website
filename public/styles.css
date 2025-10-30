@@ -521,3 +521,14 @@ nav .links a.active {
   font-weight: bold;
   border-bottom: 2px solid #4bae9d;
 }
+/* Highlight Dutch Governance Advisory link */
+nav a[href*="dutch-governance-advisory.html"] {
+  color: #006d70;
+  font-weight: 600;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+nav a[href*="dutch-governance-advisory.html"]:hover {
+  color: #009c8f;
+  text-shadow: 0 0 6px rgba(0, 156, 143, 0.3);
+}
