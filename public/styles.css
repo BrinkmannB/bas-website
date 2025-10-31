@@ -666,8 +666,9 @@ header nav {
   text-decoration: underline;
 }
 .hero {
-  background: linear-gradient(180deg, #f6fbfb 0%, #eef7f8 100%),
-    url("assets/abstract-ai-pattern.svg");
+  background: linear-gradient(135deg, #f6fbfb 0%, #eef7f8 100%),
+    url("/assets/hero-pattern.svg");
+
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
