@@ -528,10 +528,19 @@ nav a[href*="dutch-governance-advisory.html"] {
   transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-nav a[href*="dutch-governance-advisory.html"]:hover {
-  color: #009c8f;
-  text-shadow: 0 0 6px rgba(0, 156, 143, 0.3);
+nav a {
+  color: #005f73;
+  text-decoration: none;
+  margin: 0 0.8rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
 }
+
+nav a:hover {
+  color: #0a9396;
+}
+
 /* === HERO SECTION === */
 .hero {
   background: linear-gradient(180deg, #f6fbfb 0%, #eef7f8 100%);
@@ -628,13 +637,16 @@ nav a[href*="dutch-governance-advisory.html"]:hover {
 }
 /* === Sticky Navigation === */
 header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(10px);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0 0 12px 12px;
   transition: all 0.3s ease;
+}
+
+header:hover {
+  background: rgba(255, 255, 255, 0.95);
 }
 
 /* Optioneel: iets meer ruimte binnen de header */
@@ -729,4 +741,58 @@ header nav {
   color: #6c7a80;
   margin-top: 1.5rem;
   font-size: 1rem;
+}
+body {
+  outline: 5px solid red;
+}
+.lang-switch {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.lang-switch a {
+  margin: 0 0.3rem;
+}
+.lang-switch {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.lang-switch a {
+  margin: 0 0.3rem;
+}
+/* --- Nieuwe minimalistische header en navigatie --- */
+header {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  padding: 0.6rem 1.2rem;
+  border-radius: 0 0 12px 12px;
+  transition: all 0.3s ease;
+}
+
+header:hover {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+nav a {
+  color: #005f73;
+  text-decoration: none;
+  margin: 0 0.8rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #0a9396;
+}
+
+.lang-switch {
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.lang-switch a {
+  margin: 0 0.3rem;
 }
