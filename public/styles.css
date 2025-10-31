@@ -535,18 +535,15 @@ nav a[href*="dutch-governance-advisory.html"]:hover {
 /* === HERO SECTION === */
 .hero {
   background: linear-gradient(180deg, #f6fbfb 0%, #eef7f8 100%);
-  background-image: url("assets/abstract-ai-pattern.svg"); /* optioneel achtergrondpatroon */
+  background-image: url("assets/hero-pattern.svg"),
+    linear-gradient(180deg, #f6fbfb 0%, #eef7f8 100%);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   color: #0a3845;
   text-align: center;
   padding: 6rem 1.5rem 5rem;
   position: relative;
-}
-
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .hero h1 {
