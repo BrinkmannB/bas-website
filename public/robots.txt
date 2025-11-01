@@ -1,4 +1,12 @@
-User-agent: *
-Disallow:
+# robots.txt for luisterendoor.info
+# Laat alle zoekmachines de site indexeren, behalve eventuele admin- of testgedeeltes.
 
+User-agent: *
+Allow: /
+
+# Blokkeer eventuele mappen die niet geïndexeerd hoeven worden (optioneel)
+# Disallow: /admin/
+# Disallow: /test/
+
+# Verwijs naar de sitemap
 Sitemap: https://luisterendoor.info/sitemap.xml
