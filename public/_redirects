@@ -4,6 +4,26 @@
 /thanks     /thanks.html     200
 /over    /over.html   200
 /over/   /over.html   200
+/contact        /contact.html        200
+/privacy        /privacy.html        200
+/thanks         /thanks.html         200
+/over           /over.html           200
+/over/          /over.html           200
+
+# Oud WordPress URL’s permanent doorsturen (301 redirects)
+/zet-hier-je-titel/        /        301
+/sample-page/              /        301
+/diensten/                 /over.html        301
+/wie-ben-ik/               /over.html        301
+/reviews/                  /        301
+/actualiteiten/            /kennisbank.html  301
+/comments/feed/            /        301
+/tarievenpagina/           /contact.html     301
+/contact                   /contact.html     301
+
+# 404 fallback
+/*                /404.html             404
+
 
 /*          /404.html        404
 
