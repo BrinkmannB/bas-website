@@ -1,800 +1,110 @@
-/* === Kleuren & Thema === */
+/* === Basis kleuren & thema === */
 :root {
   --primary: #1a3e5f; /* diep blauwgroen */
-  --accent: #46a094; /* zacht groenblauw */
-  --background: #eef4f3; /* lichte, frisse achtergrond */
-  --text: #222222; /* bijna zwart, goed leesbaar */
-  --link: #145a7a; /* diepe blauw voor links */
+  --accent: #46a094;  /* zacht groenblauw */
+  --background: #eef4f3; /* lichte achtergrond */
+  --text: #222222;
+  --link: #145a7a;
   --link-hover: #1b7b91;
   --card: #ffffff;
-  --muted: #dbe9e7; /* zachte grijs-groene tint */
+  --muted: #dbe9e7;
   --radius: 8px;
   --shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* === Basis === */
+/* === Algemene layout === */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
-  background-color: var(--background);
+  font-family: "Inter", sans-serif;
   color: var(--text);
-  line-height: 1.7;
+  background-color: var(--background);
+  line-height: 1.6;
 }
 
-/* === Typografie === */
-h1,
-h2,
-h3 {
-  color: var(--primary);
-}
-
-a {
-  color: var(--link);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: var(--link-hover);
-}
-
-/* === Layout === */
-main {
-  max-width: 700px;
-  margin: 3rem auto;
-  padding: 1rem;
-}
-
-/* === Navigatie === */
+/* === Header === */
 header {
   padding: 1rem;
   background-color: var(--card);
+  border: none;
   box-shadow: var(--shadow);
   border-radius: var(--radius);
-  max-width: 700px;
+  max-width: 900px;
   margin: 2rem auto 1rem auto;
-  border-top: none; /* verwijdert de rode lijn als die via een variabele kwam */
-  margin-top: 0; /* zorgt dat hij netjes tegen de bovenkant aanzit */
-  padding-top: 1.5rem; /* geeft iets ademruimte zonder rare streep */
+  backdrop-filter: none; /* geen mist! */
 }
 
+/* === Navigatie === */
 nav {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  background-color: #f9fdfc;
-  padding: 1rem;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-nav ul li {
-  margin: 0;
-}
-
-/* === Banner === */
-.banner {
-  background: linear-gradient(135deg, #e0f7fa, #f1f8f9);
-  padding: 1rem 0;
   text-align: center;
-  margin-bottom: 2rem;
-  border-radius: 16px;
+  background-color: transparent;
 }
 
-.banner img {
-  width: 100%;
-  max-width: 960px;
-  border-radius: 16px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* === Footer === */
-.site-footer {
-  background-color: #f5f5f5;
-  padding: 2rem;
-  font-size: 0.9rem;
-  text-align: center;
-  color: #333;
-  margin-top: 4rem;
-}
-
-.site-footer a {
-  color: #006699;
+nav a {
   text-decoration: none;
+  color: var(--text);
+  margin: 0 1rem;
+  opacity: 1;
+  transition: color 0.2s ease;
 }
 
-.site-footer a:hover {
-  text-decoration: underline;
+nav a:hover {
+  color: var(--link-hover);
 }
 
-footer {
-  text-align: center;
-  font-size: 0.9rem;
-  color: #666;
-  padding: 2rem 0;
-}
-
-/* === Responsiviteit === */
-@media (max-width: 768px) {
-  main {
-    margin: 1rem;
-  }
-
-  header {
-    margin: 1rem;
-  }
-
-  .banner img {
-    max-width: 100%;
-    border-radius: 8px;
-  }
-
-  nav ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-}
-/* --- Hero banner section --- */
-.hero-banner {
-  position: relative;
-  text-align: center;
-  margin-bottom: 3rem;
-  overflow: hidden;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-}
-
-.hero-banner img.banner-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.hero-banner .hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5);
-  background: rgba(26, 62, 95, 0.4); /* jouw blauw, semi-transparant */
-  padding: 1.5rem 2rem;
-  border-radius: 8px;
-}
-
-.hero-banner h1 {
-  margin: 0 0 0.5rem 0;
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.hero-banner p {
-  font-size: 1.2rem;
-  margin: 0;
-  font-weight: 400;
-}
-/* --- Kennisbank lay-out --- */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 2rem 1rem;
-}
-
-.article-list {
-  list-style: none;
-  padding: 0;
-  margin: 2rem 0;
-}
-
-.article-list li {
-  background: var(--card);
-  padding: 1rem 1.5rem;
-  margin-bottom: 1rem;
-  border-radius: 10px;
-  box-shadow: var(--shadow);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.article-list li:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
-}
-
-.article-list a {
-  color: var(--primary);
-  text-decoration: none;
-}
-
-.article-list a:hover {
-  color: var(--accent);
-  text-decoration: underline;
-}
-
-.cta-block {
-  background: linear-gradient(135deg, #1a3e5f, #46a094);
-  color: white;
-  text-align: center;
-  padding: 2rem 1.5rem;
-  border-radius: 12px;
-  margin-top: 3rem;
-}
-
-.cta-block a.btn.primary {
-  display: inline-block;
-  background: white;
-  color: #1a3e5f;
-  padding: 0.8rem 1.5rem;
-  border-radius: 6px;
-  margin-top: 1rem;
-  font-weight: 600;
-  text-decoration: none;
-}
-
-.cta-block a.btn.primary:hover {
-  background: #e0f7fa;
-}
-/* --- Hero (compacter, betere leesbaarheid) --- */
+/* === Hero-sectie === */
 .hero {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  margin: 2rem 0 2.5rem;
-  box-shadow: var(--shadow);
-}
-
-.hero--compact .hero__inner {
-  position: relative;
-  z-index: 2;
   text-align: center;
-  padding: clamp(2rem, 5vw, 3.5rem) clamp(1rem, 3vw, 2rem);
+  background-color: var(--card);
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+  padding: 4rem 2rem;
 }
 
-.hero__inner h1 {
-  margin: 0 0 0.6rem;
-  font-size: clamp(1.6rem, 3.6vw, 2.4rem);
-  color: #0a3e57;
-  text-wrap: balance;
+.hero h1 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.hero__sub {
-  margin: 0 auto 1rem;
-  max-width: 760px;
-  color: #0e5069;
-  font-size: clamp(1rem, 2.2vw, 1.15rem);
+.hero p {
+  color: var(--text);
+  font-size: 1.2rem;
 }
 
-.hero__cta {
-  display: flex;
-  gap: 0.75rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-/* Buttons in hero */
+/* Knoppen */
 .btn {
   display: inline-block;
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--radius);
   text-decoration: none;
-  border-radius: 10px;
-  padding: 0.7rem 1.1rem;
   font-weight: 600;
-  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .btn--primary {
   background: var(--primary);
   color: #fff;
-  border-color: transparent;
+  border: none;
+}
+
+.btn--primary:hover {
+  background: var(--accent);
 }
 
 .btn--ghost {
   background: #fff;
   color: var(--primary);
+  border: 1px solid var(--primary);
 }
 
-/* Achtergrondbeeld met subtiele overlay voor contrast */
-.hero__bg {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-}
-
-.hero__bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  /* zachte overlay zodat tekst altijd leesbaar is op de banner */
-  background: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.65) 0%,
-    rgba(255, 255, 255, 0.55) 40%,
-    rgba(255, 255, 255, 0.65) 100%
-  );
-}
-
-/* Mobiel iets compacter */
-@media (max-width: 768px) {
-  .hero__cta .btn {
-    width: 100%;
-    text-align: center;
-  }
-}
-/* --- Navigatie verbetering --- */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: rgba(255, 255, 255, 0);
-
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  transition: background 0.3s ease;
-}
-
-.nav {
-  max-width: 1040px;
-  margin: 0 auto;
-  padding: 0.8rem 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.nav .brand {
-  font-weight: 700;
-  letter-spacing: 0.3px;
-  color: var(--primary);
-  text-decoration: none;
-  font-size: 1.1rem;
-}
-
-.nav .links {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
-
-.nav a {
-  text-decoration: none;
-  color: var(--text);
-  opacity: 1, 00;
-  transition: color 0.2s ease, opacity 0.2s ease;
-}
-
-.nav a:hover {
-  opacity: 1;
-  color: var(--primary);
-  text-decoration: underline;
-}
-
-.lang-switch {
-  font-size: 0.95rem;
-  opacity: 0.9;
-}
-
-.lang-switch a {
-  margin: 0 0.2rem;
-}
-
-/* Mobiel menu */
-.menu-toggle {
-  display: none;
-}
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-}
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  margin: 4px 0;
-  background-color: var(--primary);
-}
-
-/* Responsive weergave */
-@media (max-width: 780px) {
-  .hamburger {
-    display: flex;
-  }
-  .links {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    background: rgba(255, 255, 255, 0.97);
-    position: absolute;
-    top: 56px;
-    right: 1rem;
-    left: 1rem;
-    padding: 1rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  }
-  .menu-toggle:checked + .hamburger + .links {
-    display: flex;
-  }
-}
-/* --- Dienstenpagina --- */
-.services-intro {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-
-.services-intro p {
-  max-width: 700px;
-  margin: 0.5rem auto 0;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.service-card {
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.service-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-}
-
-.service-card h2 {
-  color: var(--primary);
-  margin-bottom: 0.75rem;
-}
-
-.cta-block {
-  text-align: center;
-  background: linear-gradient(135deg, #e6f5f3, #f3fbfa);
-  padding: 2.5rem 1rem;
-  border-radius: 16px;
-  box-shadow: var(--shadow);
-}
-
-.cta-block h3 {
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-}
-/* --- Kennisbank --- */
-.kb-intro {
-  text-align: center;
-  margin-bottom: 2.5rem;
-}
-
-.kb-intro p {
-  max-width: 700px;
-  margin: 0.5rem auto;
-  font-size: 1.1rem;
-  color: #333;
-}
-
-.kb-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 3rem;
-}
-
-.kb-card {
-  background: var(--card);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.kb-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-}
-
-.kb-card h2 {
-  color: var(--primary);
-  margin-bottom: 0.75rem;
-}
-/* Highlight de actieve navigatielink */
-nav .links a.active {
-  color: #4bae9d; /* jouw groenaccent */
-  font-weight: bold;
-  border-bottom: 2px solid #4bae9d;
-}
-/* Highlight Dutch Governance Advisory link */
-nav a[href*="dutch-governance-advisory.html"] {
-  color: #006d70;
-  font-weight: 600;
-  transition: color 0.3s ease, text-shadow 0.3s ease;
-}
-
-nav a {
-  color: #005f73;
-  text-decoration: none;
-  margin: 0 0.8rem;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: #0a9396;
-}
-
-/* === HERO SECTION === */
-.hero {
-  background: linear-gradient(180deg, #f6fbfb 0%, #eef7f8 100%);
-  background-image: url("assets/hero-pattern.svg"),
-    linear-gradient(180deg, #f6fbfb 0%, #eef7f8 100%);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  color: #0a3845;
-  text-align: center;
-  padding: 8rem 2rem 7rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  max-width: 900px;
-  margin: 4rem auto;
-  position: relative;
-}
-
-.hero h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-}
-
-.hero p {
-  font-size: 1.1rem;
-  margin-bottom: 1.8rem;
-  line-height: 1.6;
-  color: #496d7c;
-}
-
-.hero .button,
-.hero a.button {
-  display: inline-block;
-  background-color: #7fbfb5;
-  color: white;
-  font-weight: 600;
-  padding: 0.9rem 2rem;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: background-color 0.2s ease;
-}
-
-.hero .button:hover {
-  background-color: #68a89d;
-}
-
-.hero em {
-  display: block;
-  margin-top: 1.8rem;
-  font-size: 0.9rem;
-  color: #7a8b92;
-  font-style: italic;
-}
-
-.hero h1 {
-  font-family: "Raleway", "Inter", sans-serif;
-  font-size: 2.6rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: #09475c;
-}
-
-.hero .subtitle {
-  font-family: "Open Sans", "Lato", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #1f5465;
-  margin-bottom: 2.5rem;
-}
-
-.hero .cta-button {
-  background-color: #2c9183;
+.btn--ghost:hover {
+  background: var(--primary);
   color: #fff;
-  font-weight: 600;
-  padding: 0.9rem 2.2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
 }
 
-.hero .cta-button:hover {
-  background-color: #23766a;
-  transform: translateY(-2px);
-}
-
-.hero .quote {
-  font-style: italic;
-  color: #3b6c72;
-  margin-top: 2.2rem;
-  font-size: 1.05rem;
-  opacity: 0.9;
-}
-/* === Sticky Navigation === */
-header {
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  padding: 0.6rem 1.2rem;
-  border-radius: 0 0 12px 12px;
-  transition: all 0.3s ease;
-}
-
-header:hover {
-  background: rgba(255, 255, 255, 0.95);
-}
-
-/* Optioneel: iets meer ruimte binnen de header */
-header nav {
-  padding: 0.8rem 1.5rem;
-}
-
-/* Zorg dat de site-header niet te breed wordt */
-.site-header {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.footer-content {
+/* === Footer === */
+footer {
   text-align: center;
-  font-size: 0.95rem;
-  color: #4a5568;
-  background: #f6fbfb;
-
-  padding: 2rem 1rem;
-  margin-top: 4rem;
-}
-
-.footer-content a {
-  color: #2b6777;
-  text-decoration: none;
-}
-
-.footer-content a:hover {
-  text-decoration: underline;
-}
-.hero {
-  background: linear-gradient(135deg, #f6fbfb 0%, #eef7f8 100%),
-    url("/assets/hero-pattern.svg");
-
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
-  color: #3a4a58;
-  padding: 8rem 2rem;
-  position: relative;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hero:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
-}
-
-.hero-content h1 {
-  font-size: 2.4rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-.highlight-link {
-  color: #2b6777;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
-.highlight-link:hover {
-  color: #1f4f59;
-  text-decoration: underline;
-}
-
-.cta-button {
-  display: inline-block;
-  background-color: #9fc9c1;
-  color: white;
-  font-weight: 600;
-  padding: 0.9rem 2rem;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.cta-button:hover {
-  background-color: #8bbab1;
-  transform: translateY(-2px);
-}
-
-.tagline {
-  font-style: italic;
-  color: #6c7a80;
-  margin-top: 1.5rem;
-  font-size: 1rem;
-}
-body {
-  outline: 5px solid red;
-}
-.lang-switch {
-  font-size: 0.85rem;
-  opacity: 0.85;
-}
-
-.lang-switch a {
-  margin: 0 0.3rem;
-}
-.lang-switch {
-  font-size: 0.85rem;
-  opacity: 0.85;
-}
-
-.lang-switch a {
-  margin: 0 0.3rem;
-}
-/* --- Nieuwe minimalistische header en navigatie --- */
-header {
-  background: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  padding: 0.6rem 1.2rem;
-  border-radius: 0 0 12px 12px;
-  transition: all 0.3s ease;
-}
-
-header:hover {
-  background: rgba(255, 255, 255, 0.95);
-}
-
-nav a {
-  color: #005f73;
-  text-decoration: none;
-  margin: 0 0.8rem;
-  font-weight: 500;
-  font-size: 0.95rem;
-  transition: color 0.2s ease;
-}
-
-nav a:hover {
-  color: #0a9396;
-}
-
-.lang-switch {
-  font-size: 0.85rem;
-  opacity: 0.85;
-}
-
-.lang-switch a {
-  margin: 0 0.3rem;
+  padding: 2rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
 }
