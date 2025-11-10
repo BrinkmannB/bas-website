@@ -54,10 +54,9 @@ header {
   border-radius: var(--radius);
   max-width: 700px;
   margin: 2rem auto 1rem auto;
-  border-top: none;       /* verwijdert de rode lijn als die via een variabele kwam */
-  margin-top: 0;          /* zorgt dat hij netjes tegen de bovenkant aanzit */
-  padding-top: 1.5rem;    /* geeft iets ademruimte zonder rare streep */
-
+  border-top: none; /* verwijdert de rode lijn als die via een variabele kwam */
+  margin-top: 0; /* zorgt dat hij netjes tegen de bovenkant aanzit */
+  padding-top: 1.5rem; /* geeft iets ademruimte zonder rare streep */
 }
 
 nav {
@@ -106,7 +105,6 @@ nav ul li {
   text-align: center;
   color: #333;
   margin-top: 4rem;
-  
 }
 
 .site-footer a {
@@ -342,8 +340,8 @@ footer {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(255, 255, 255, 0.85);
-  backdrop-filter: blur(8px) saturate(130%);
+  background: rgba(255, 255, 255, 0);
+
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   transition: background 0.3s ease;
 }
@@ -374,7 +372,7 @@ footer {
 .nav a {
   text-decoration: none;
   color: var(--text);
-  opacity: 1,00;
+  opacity: 1, 00;
   transition: color 0.2s ease, opacity 0.2s ease;
 }
 
@@ -641,7 +639,7 @@ nav a:hover {
 }
 /* === Sticky Navigation === */
 header {
-  background: rgba(255, 255, 255, 0.0);
+  background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding: 0.6rem 1.2rem;
@@ -668,7 +666,7 @@ header nav {
   font-size: 0.95rem;
   color: #4a5568;
   background: #f6fbfb;
-  
+
   padding: 2rem 1rem;
   margin-top: 4rem;
 }
@@ -767,7 +765,7 @@ body {
 }
 /* --- Nieuwe minimalistische header en navigatie --- */
 header {
-  background: rgba(255, 255, 255, 0.0);
+  background: rgba(255, 255, 255, 0);
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
   padding: 0.6rem 1.2rem;
