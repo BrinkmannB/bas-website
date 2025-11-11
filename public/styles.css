@@ -1,7 +1,7 @@
 /* === Basis kleuren & thema === */
 :root {
   --primary: #1a3e5f; /* diep blauwgroen */
-  --accent: #46a094;  /* zacht groenblauw */
+  --accent: #46a094; /* zacht groenblauw */
   --background: #eef4f3; /* lichte achtergrond */
   --text: #222222;
   --link: #145a7a;
@@ -107,4 +107,114 @@ footer {
   padding: 2rem 0;
   color: var(--muted);
   font-size: 0.9rem;
+}
+/* === Hero Banner Styling === */
+.hero-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 260px;
+  background: linear-gradient(160deg, #e8f8f5 0%, #f9fcfb 100%);
+  overflow: hidden;
+  border-bottom: 1px solid #dceee8;
+}
+
+.hero-banner .hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem 1.5rem;
+}
+
+.hero-banner h1 {
+  font-size: 2rem;
+  color: #013d4f;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.hero-banner p {
+  color: #2e575d;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.hero-banner .hero-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.18;
+  z-index: 1;
+}
+
+.hero-banner .hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === General Page Adjustments === */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0f0eb;
+  padding: 0.8rem 1.5rem;
+}
+
+.navbar .logo {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #004f61;
+  text-decoration: none;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.2rem;
+  margin: 0;
+}
+
+.navbar .nav-links a {
+  text-decoration: none;
+  color: #004f61;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar .nav-links a:hover,
+.navbar .nav-links a.active {
+  color: #3aa1b3;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #f8fcfa;
+  border-top: 1px solid #e3f2ed;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+/* === Optional: unify section layout === */
+main {
+  background-color: #f9fcfb;
+}
+
+/* Mobile tweaks */
+@media (max-width: 700px) {
+  .hero-banner {
+    min-height: 200px;
+    padding: 1.5rem 1rem;
+  }
+  .hero-banner h1 {
+    font-size: 1.5rem;
+  }
+  .navbar .nav-links {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
 }

@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Examples – Luisterend Oor</title>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Luisterend Oor</h1>
-      <nav>
-        <ul>
+    <header class="site-header">
+      <nav class="navbar">
+        <a href="index.html" class="logo">Luisterend Oor</a>
+        <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="examples.html" class="active">Examples</a></li>
@@ -20,72 +20,78 @@
       </nav>
     </header>
 
-    <section class="banner">
-      <img
-        src="../img/ai-cases-banner-en.png"
-        alt="Abstract AI Governance banner"
-      />
+    <!-- Hero banner -->
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h1>Examples of AI Governance in Practice</h1>
+        <p>
+          Concrete projects where responsible AI use enhances transparency,
+          ethics, and human-centered policy.
+        </p>
+      </div>
+      <div class="hero-bg">
+        <img src="assets/hero-pattern.svg" alt="Abstract background" />
+      </div>
     </section>
 
-    <main class="container">
-      <h2>Practical Examples of AI Governance</h2>
-      <p>
-        Projects that demonstrate how responsible AI strengthens transparency,
-        ethics, and human-centred policy.
-      </p>
-
-      <section class="case">
-        <h3>Case 1: Fair Housing Allocation</h3>
+    <!-- Main content -->
+    <main>
+      <section class="examples-section">
+        <h2>Practical Examples of AI Governance</h2>
         <p>
-          A municipality used algorithms to improve fairness in housing
-          allocation. Through an <strong>AI impact assessment</strong> and
-          <strong>fairness audit</strong>, bias was detected and corrected —
-          resulting in more transparent and trusted decision-making.
+          Projects where responsible AI use contributes to transparency, ethics,
+          and human-centered policy.
         </p>
-      </section>
 
-      <section class="case">
-        <h3>Case 2: Risk-based Inspections</h3>
-        <p>
-          A national inspectorate applied predictive AI for prioritising
-          inspections. A <strong>governance framework</strong> ensured
-          explainability and proportionality, strengthening public
-          accountability and trust.
-        </p>
-      </section>
+        <article class="example">
+          <h3>Case 1: AI in Housing Allocation</h3>
+          <p>
+            A municipality used algorithms to distribute housing applications
+            more fairly. Through an <strong>impact assessment</strong> and
+            <strong>fairness analysis</strong>, bias was detected and corrected.
+          </p>
+          <p>
+            <strong>Result:</strong> fairer policy, greater transparency, and
+            increased public trust.
+          </p>
+        </article>
 
-      <section class="case">
-        <h3>Case 3: AI Ethics in Finance</h3>
+        <article class="example">
+          <h3>Case 2: Risk-Based Inspections</h3>
+          <p>
+            An inspection authority applied predictive AI to prioritize
+            oversight. With a <strong>governance framework</strong> and regular
+            evaluations, explainability and proportionality were ensured.
+          </p>
+          <p>
+            <strong>Result:</strong> decisions could be better justified to both
+            citizens and Parliament.
+          </p>
+        </article>
+
+        <article class="example">
+          <h3>Case 3: AI Ethics in the Financial Sector</h3>
+          <p>
+            A financial institution sought advice on developing an
+            <strong>AI ethics code</strong>.
+          </p>
+          <p>
+            <strong>Result:</strong> clear guidelines for data use,
+            transparency, and human oversight — aligned with European
+            regulations such as the <em>AI Act</em>.
+          </p>
+        </article>
+
+        <h2>AI Governance in Practice</h2>
         <p>
-          A financial institution requested guidance in drafting an
-          <strong>AI Ethics Code</strong>. The result: practical rules for data
-          use, transparency, and human oversight — aligned with the
-          <em>EU AI Act</em>.
+          Concrete examples of how responsible AI fosters trust, fairness, and
+          better governance.
         </p>
       </section>
     </main>
-    <section class="hero-banner">
-      <div class="hero-text">
-        <h1>AI Governance in Practice</h1>
-        <p>Real-world examples of responsible and human-centred AI.</p>
-      </div>
-      <img
-        src="/img/ai-cases-banner-en.svg"
-        alt="Abstract AI banner"
-        class="banner-image"
-      />
-    </section>
 
     <footer class="site-footer">
-      <p>
-        <strong>Chamber of Commerce:</strong> 12345678 |
-        <strong>Email:</strong>
-        <a href="mailto:info@luisterendoor.info">info@luisterendoor.info</a> |
-        <a href="https://www.linkedin.com/in/basbrinkmann" target="_blank"
-          >LinkedIn</a
-        >
-      </p>
-      <p>&copy; 2025 Luisterend Oor – Bas Brinkmann</p>
+      <p>&copy; 2025 Luisterend Oor – All rights reserved.</p>
     </footer>
   </body>
 </html>

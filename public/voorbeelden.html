@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Luisterend Oor</h1>
-      <nav>
-        <ul>
+    <header class="site-header">
+      <nav class="navbar">
+        <a href="index.html" class="logo">Luisterend Oor</a>
+        <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="diensten.html">Diensten</a></li>
           <li><a href="voorbeelden.html" class="active">Voorbeelden</a></li>
@@ -20,73 +20,80 @@
       </nav>
     </header>
 
-    <section class="banner">
-      <img
-        src="img/ai-cases-banner-nl.png"
-        alt="Abstracte banner AI Governance"
-      />
+    <!-- Hero banner -->
+    <section class="hero-banner">
+      <div class="hero-content">
+        <h1>Voorbeelden van AI Governance in de praktijk</h1>
+        <p>
+          Concrete projecten waarin verantwoord AI-gebruik bijdraagt aan
+          transparantie, ethiek en mensgericht beleid.
+        </p>
+      </div>
+      <div class="hero-bg">
+        <img src="assets/hero-pattern.svg" alt="Abstracte achtergrond" />
+      </div>
     </section>
 
-    <main class="container">
-      <h2>Praktijkvoorbeelden van AI Governance</h2>
-      <p>
-        Projecten waarin verantwoord AI-gebruik bijdraagt aan transparantie,
-        ethiek en mensgericht beleid.
-      </p>
-
-      <section class="case">
-        <h3>Case 1: AI bij woningtoewijzing</h3>
+    <!-- Main content -->
+    <main>
+      <section class="examples-section">
+        <h2>Praktijkvoorbeelden van AI Governance</h2>
         <p>
-          Een gemeente wilde algoritmen inzetten om woningaanvragen eerlijker te
-          verdelen. Door een <strong>impactassessment</strong> en
-          <strong>fairnessanalyse</strong> uit te voeren, werd bias opgespoord
-          en gecorrigeerd. Resultaat: transparanter beleid en meer vertrouwen
-          van burgers.
+          Projecten waarin verantwoord AI-gebruik bijdraagt aan transparantie,
+          ethiek en mensgericht beleid.
         </p>
-      </section>
 
-      <section class="case">
-        <h3>Case 2: Risicogebaseerde inspecties</h3>
-        <p>
-          Een inspectiedienst gebruikte voorspellende AI om toezicht te
-          prioriteren. Met een <strong>governance-raamwerk</strong> en
-          periodieke evaluaties werden uitlegbaarheid en proportionaliteit
-          geborgd. Hierdoor konden besluiten beter verantwoord worden naar
-          burgers en Kamerleden.
-        </p>
-      </section>
+        <article class="example">
+          <h3>Case 1: AI bij woningtoewijzing</h3>
+          <p>
+            Een gemeente gebruikte algoritmen om woningaanvragen eerlijker te
+            verdelen. Via een <strong>impactassessment</strong> en
+            <strong>fairnessanalyse</strong> werd bias opgespoord en
+            gecorrigeerd.
+          </p>
+          <p>
+            <strong>Resultaat:</strong> eerlijker beleid, meer transparantie en
+            groter vertrouwen van burgers.
+          </p>
+        </article>
 
-      <section class="case">
-        <h3>Case 3: AI-ethiek in de financiële sector</h3>
+        <article class="example">
+          <h3>Case 2: Risicogebaseerde inspecties</h3>
+          <p>
+            Een inspectiedienst zette voorspellende AI in om toezicht te
+            prioriteren. Dankzij een <strong>governance-raamwerk</strong> en
+            periodieke evaluaties bleven uitlegbaarheid en proportionaliteit
+            gewaarborgd.
+          </p>
+          <p>
+            <strong>Resultaat:</strong> besluiten konden beter worden
+            verantwoord richting burgers en Kamerleden.
+          </p>
+        </article>
+
+        <article class="example">
+          <h3>Case 3: AI-ethiek in de financiële sector</h3>
+          <p>
+            Een financiële instelling vroeg advies bij het ontwikkelen van een
+            <strong>AI-ethiekcode</strong>.
+          </p>
+          <p>
+            <strong>Resultaat:</strong> heldere richtlijnen voor datagebruik,
+            transparantie en menselijke toetsing — afgestemd op Europese
+            regelgeving zoals de <em>AI Act</em>.
+          </p>
+        </article>
+
+        <h2>AI Governance in de praktijk</h2>
         <p>
-          Een financiële instelling vroeg om advies bij het opstellen van een
-          <strong>AI-ethiekcode</strong>. Het resultaat was een concrete set
-          richtlijnen voor datagebruik, transparantie en menselijke toetsing —
-          afgestemd op Europese regelgeving zoals de <em>AI Act</em>.
+          Concrete voorbeelden van hoe verantwoorde AI bijdraagt aan vertrouwen,
+          rechtvaardigheid en beter beleid.
         </p>
       </section>
     </main>
-    <section class="hero-banner">
-      <div class="hero-text">
-        <h1>AI Governance in de praktijk</h1>
-        <p>Concrete voorbeelden van verantwoord en mensgericht AI-gebruik.</p>
-      </div>
-      <img
-        src="/img/ai-cases-banner-nl.svg"
-        alt="Abstracte AI banner"
-        class="banner-image"
-      />
-    </section>
 
     <footer class="site-footer">
-      <p>
-        <strong>KvK:</strong> 12345678 | <strong>E-mail:</strong>
-        <a href="mailto:info@luisterendoor.info">info@luisterendoor.info</a> |
-        <a href="https://www.linkedin.com/in/basbrinkmann" target="_blank"
-          >LinkedIn</a
-        >
-      </p>
-      <p>&copy; 2025 Luisterend Oor – Bas Brinkmann</p>
+      <p>&copy; 2025 Luisterend Oor – Alle rechten voorbehouden.</p>
     </footer>
   </body>
 </html>
