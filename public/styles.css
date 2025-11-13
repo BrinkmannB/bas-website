@@ -335,3 +335,13 @@ main {
     font-size: 0.95rem;
   }
 }
+/* === Hero Compact Styling (fix leeg vlak) === */
+.hero--compact {
+  background: url("assets/hero-pattern.svg") no-repeat center top;
+  background-size: cover;
+  background-color: transparent; /* geen wit vlak */
+  padding: 3rem 1rem;
+  min-height: 250px;
+  border: none;
+  box-shadow: none;
+}
