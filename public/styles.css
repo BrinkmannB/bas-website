@@ -413,7 +413,8 @@ header li {
 /* ----------------------------- */
 
 /* Verwijder ALLE standaard bullets overal */
-ul, li {
+ul,
+li {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -440,7 +441,20 @@ ul:empty {
 .hero--compact ul li,
 .themes,
 .themes li {
-    list-style: none !important;
-    padding-left: 0 !important;
-    margin-left: 0 !important;
+  list-style: none !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+/* Fix positie vinkjeslijst in hero */
+.hero--compact .themes {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 650px;
+  padding-left: 0 !important;
+  text-align: left;
+}
+.hero--compact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
