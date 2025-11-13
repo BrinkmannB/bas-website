@@ -367,3 +367,7 @@ header span:empty,
 header div:empty {
   display: none !important;
 }
+/* Verberg mobiele menu-toggle checkbox */
+#menu-toggle {
+  display: none !important;
+}
