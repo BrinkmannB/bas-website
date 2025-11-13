@@ -433,3 +433,14 @@ li:empty {
 ul:empty {
   display: none !important;
 }
+/* 🔥 Kill ALL default bullets in hero section */
+.hero ul,
+.hero ul li,
+.hero--compact ul,
+.hero--compact ul li,
+.themes,
+.themes li {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+}
