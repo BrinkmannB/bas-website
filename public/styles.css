@@ -345,3 +345,25 @@ main {
   border: none;
   box-shadow: none;
 }
+.hero-section ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+.hero-section li {
+  list-style-type: none;
+}
+nav img + *:empty {
+  display: none;
+}
+
+nav .empty,
+header .empty {
+  display: none !important;
+}
+nav span:empty,
+nav div:empty,
+header span:empty,
+header div:empty {
+  display: none !important;
+}
